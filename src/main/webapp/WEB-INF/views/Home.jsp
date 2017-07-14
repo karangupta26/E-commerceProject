@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@include file="Header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,9 +15,9 @@
 	</style>
  </head>
 <body>
+<%@include file="Header.jsp" %>
 <h1><marquee>All In 1 Clothing</marquee></h1>
-
-	<!-- Carousel code 1-->
+<!-- Carousel code 1-->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -221,7 +220,6 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-
-
+<%@include file="Footer.jsp" %>
 </body>
 </html>
