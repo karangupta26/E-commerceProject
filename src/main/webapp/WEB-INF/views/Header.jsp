@@ -17,31 +17,41 @@
 <body>
 <header>
 <br><br><br><br>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<div>
-				<button type="button" class="navbar-toggle" data-toggle="collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li><a href="#"> Home</a></li>
-					<li><a href="#"> Men</a></li>
-					<li><a href="#"> Women</a></li>
-					<li><a href="#"> Boys</a></li>
-					<li><a href="#"> Girls</a></li>
-				</ul>
-				<ul class="nav navbar-nav navbar-right">
-				    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-				    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
-				</ul>
-			</div>
-			
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+	<div class="row">
+	<div class="col-md-3">
+		<div class="navbar-header">
+		<img src="Logo1.jpeg" alt="FG" class="img-rounded"  width="120" height="50"></img>
 		</div>
-	</nav>
+	</div>
+	</div>		
+	</div>
+</nav>
+<nav class="navbar navbar-default navbar-lower">
+	<div class="container-fluid">
+		<div>
+			<button type="button" class="navbar-toggle" data-toggle="collapse">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="navbar-collapse collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#"> Home</a></li>
+				<li><a href="#"> Men</a></li>
+				<li><a href="#"> Women</a></li>
+				<li><a href="#"> Boys</a></li>
+				<li><a href="#"> Girls</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
 </header>
 </body>
 </html>
