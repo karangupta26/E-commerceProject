@@ -21,7 +21,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
 	<div class="row">
-	<div class="col-xs-12">
+	<div class="col-lg-12">
 		<ul class="nav navbar-nav navbar-right">
 				<li><font class="uppernavbarfont"><a href="#">Sell on FashGen</a></font></li>
 				<li><font class="uppernavbarfont"><a href="#">About Us </a></font></li>
