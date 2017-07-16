@@ -19,14 +19,32 @@
 <br><br><br><br>
 <nav class="navbar navbar-default navbar-fixed-top">
 	<div class="container-fluid">
+	
 	<div class="row">
-	<div class="col-md-3">
+	<div class="col-xs-12">
+		<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Sell on FashGen</a></li>
+				<li><a href="#">About Us </a></li>
+			</ul>
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-xs-3">
 		<div class="navbar-header">
 		<img src="Logo1.jpeg" alt="FG" class="img-rounded"  width="120" height="50"></img>
 		</div>
 	</div>
-	</div>		
+	<div class="col-xs-6">
+		<div>
+		<form class="navbar-form" role="search" >
+			<div class="form-group">
+				<input type="text" class="form-control" size="65" placeholder="search" />
+			</div>
+		</form>
+		</div>
 	</div>
+	</div>		
+	</div>	
 </nav>
 <nav class="navbar navbar-default navbar-lower">
 	<div class="container-fluid">
