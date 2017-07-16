@@ -10,6 +10,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<base href="resources\images\" target="_blank">
+	<link rel="stylesheet" href="resources\tools\">
 	<style type="text/css">
 	
 	</style>
@@ -17,14 +18,13 @@
 <body>
 <header>
 <br><br><br><br>
-<nav class="navbar navbar-default navbar-fixed-top">
-	<div class="container-fluid">
-	
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
 	<div class="row">
 	<div class="col-xs-12">
 		<ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Sell on FashGen</a></li>
-				<li><a href="#">About Us </a></li>
+				<li><font class="uppernavbarfont"><a href="#">Sell on FashGen</a></font></li>
+				<li><font class="uppernavbarfont"><a href="#">About Us </a></font></li>
 			</ul>
 	</div>
 	</div>
@@ -46,7 +46,7 @@
 	</div>		
 	</div>	
 </nav>
-<nav class="navbar navbar-default navbar-lower">
+<nav class="navbar navbar-default navbar-lower" role="navigation">
 	<div class="container-fluid">
 		<div>
 			<button type="button" class="navbar-toggle" data-toggle="collapse">
@@ -56,14 +56,14 @@
 			</button>
 		</div>
 		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
+			<ul class="nav nav-pills" role="tablist">
 				<li><a href="#"> Home</a></li>
 				<li><a href="#"> Men</a></li>
 				<li><a href="#"> Women</a></li>
 				<li><a href="#"> Boys</a></li>
 				<li><a href="#"> Girls</a></li>
 			</ul>
-			<ul class="nav navbar-nav navbar-right">
+			<ul class="nav navbar-right nav-pills " role="tablist">
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
 				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
 			</ul>
