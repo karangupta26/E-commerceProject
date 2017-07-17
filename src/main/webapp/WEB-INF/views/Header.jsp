@@ -34,15 +34,27 @@
 	<div class="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
 		<form class="navbar-form" role="search" >
 			<div class="form-group">
-				<input type="text" class="form-control" size="65" placeholder="search" />
+				<input type="text" class="form-control" size="90" placeholder="search" />
 			</div>
 		</form>
 		</div>
 	</div>
-	<div class="col-xs-1"></div>
-	<div class="col-xs-1"></div>
-	
-		
+	<div class="col-xs-1">
+	<div class="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
+		<form class="navbar-form" role="">
+			<div class="form-group">
+				<button type="button" class="btn btn-default">
+      				<span class="glyphicon glyphicon-search"></span> Search
+    			</button>
+			</div>
+		</form>	
+	</div>
+	</div>
+	<div class="col-xs-2">
+	<div class="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
+	<p class="navbarfont"><b><a href="#">SELL ON FASHGEN</a></b></p>
+	</div>
+	</div>
 	</div>
 	</div>
 </nav>
