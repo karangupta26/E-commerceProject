@@ -18,7 +18,7 @@
 <body>
 <header>
 <br><br><br><br>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<!--  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	<div class="container">
 	<div class="row">
 	<div class="col-lg-12">
@@ -45,25 +45,25 @@
 	</div>
 	</div>		
 	</div>	
-</nav>
+</nav>-->
 <nav class="navbar navbar-default navbar-lower" role="navigation">
 	<div class="container-fluid">
-		<div>
-			<button type="button" class="navbar-toggle" data-toggle="collapse">
+		<div class="navbar header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="navbar" >
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
 		</div>
 		<div class="navbar-collapse collapse">
-			<ul class="nav nav-pills" role="tablist">
+			<ul class="nav nav-pills " role="tablist">
 				<li><a href="#"> Home</a></li>
 				<li><a href="#"> Men</a></li>
 				<li><a href="#"> Women</a></li>
 				<li><a href="#"> Boys</a></li>
 				<li><a href="#"> Girls</a></li>
 			</ul>
-			<ul class="nav navbar-right nav-pills " role="tablist">
+			<ul class="nav navbar-right nav-pills" role="tablist">
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
 				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
 			</ul>
