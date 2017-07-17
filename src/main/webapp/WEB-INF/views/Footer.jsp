@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,10 +29,13 @@
 <footer class="footer" id="footer">
 <div class="container">
      <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-5">
         <h4><span class="copyright text-inverse">Copyright © Karan Gupta Under the Guidance of Vishal Sir</span></h4>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-2">
+		<h4><b><a href="<c:url value="/resources/views/Footer.jsp"/>">About Us</a></b></h4>
+		</div>
+        <div class="col-sm-5">
             <div class="row">
               <div class="col-md-12 hidden-xs text-right">
                 <a href="#"><i class="fa fa-2x fa-fw fa-instagram text-inverse"></i></a>
