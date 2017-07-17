@@ -14,7 +14,7 @@
 	
 	</style>
  </head>
-<body>
+
 <%@include file="Header.jsp" %>
 <h1><marquee>All In 1 Clothing</marquee></h1>
 <!-- Carousel code 1-->
