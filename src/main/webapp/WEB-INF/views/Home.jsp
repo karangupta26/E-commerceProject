@@ -10,13 +10,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<base href="resources\images\" target="_blank">
+	<link rel="stylesheet" type="text/css" href="resources/tools/CustomStyle.css">
 	<style type="text/css">
 	
 	</style>
  </head>
 
 <%@include file="Header.jsp" %>
-<h1><marquee>All In 1 Clothing</marquee></h1>
+<section><h2>All In 1 Clothing</h2></section>
 <!-- Carousel code 1-->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -56,8 +57,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<br><br><br><br>
-<h3><marquee>Men's Style</marquee> </h3>
+<section><br><br><br>
+<h2>Men's Style</h2></section>
 <!-- Carousel code 2-->
 <div id="myCarousel2" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -97,9 +98,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<br><br><br><br>
+<section><br><br><br>
+<h2>Women's Beauty </h2></section>
 <!-- Carousel code 3-->
-<h3><marquee>Women's Beauty</marquee> </h3>
 <div id="myCarousel3" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -138,8 +139,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<br><br><br><br>
-<h3><marquee>Boy's Decency</marquee> </h3>
+<section><br><br><br>
+<h2>Boy's Decency</h2></section>
 <!-- Carousel code 4-->
 <div id="myCarousel4" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -179,8 +180,8 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<br><br><br><br>
-<h3><marquee>Girl's Cuteness</marquee></h3>
+<section><br><br><br>
+<h3>Girl's Cuteness</h3></section>
 <!-- Carousel code 5-->
 <div id="myCarousel5" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
