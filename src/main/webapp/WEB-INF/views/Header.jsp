@@ -9,15 +9,22 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<base href="resources\images\" target="_blank">
-	<link rel="stylesheet" href="resources\tools\">
+	<link rel="stylesheet" type="text/css" href="resources\tools\CustomStyle.css">
 	<style type="text/css">
+	section{
+	background-color:#d9d9d9;
+	}
+	.navbar{
+		background-color:#d9d9d9;
+	}
+	
 		
 	</style>
 </head>
 <body>
 <header>
 
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
 	<div class="row">
 	<div class="col-xs-1">
@@ -59,7 +66,7 @@
 	</div>
 </nav>
 
-<nav class="navbar navbar-no-margin" role="navigation">
+<nav class="navbar navbar-custom " role="navigation">
 	<div class="container-fluid">
 		<div class="navbar header">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" >
