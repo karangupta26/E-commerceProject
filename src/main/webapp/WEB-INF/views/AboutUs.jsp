@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<%@ include file="Header.jsp" %> 
 <p>This is Devloped by Karan Gupta a Student of NIIT Under the guidance of Vandana Ma'am and Vishal Sir.
 </p>
-</body>
+<%@include file="Footer.jsp" %>
 </html>
