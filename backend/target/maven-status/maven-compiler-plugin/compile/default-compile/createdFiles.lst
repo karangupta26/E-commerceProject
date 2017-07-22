@@ -1,0 +1,9 @@
+com\project\service\ProductService.class
+com\project\backend\App.class
+com\project\service\ProductServiceImpl.class
+com\project\model\Product.class
+com\project\configuration\dBConfiguration.class
+com\project\dao\ProductDaoImpl.class
+com\project\model\Vendor.class
+com\project\dao\ProductDao.class
+com\project\model\Category.class
