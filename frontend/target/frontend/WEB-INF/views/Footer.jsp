@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +33,7 @@
         <h4><span class="copyright text-inverse">Copyright © Karan Gupta Under the Guidance of Vishal Sir</span></h4>
         </div>
         <div class="col-sm-2">
-		<h4><b><a href="<c:url value="About Us"/>"> About Us</a></b></h4>
+		<h4><b><a href="<c:url value="/AboutUs" />">About Us</a></b></h4>
 		</div>
         <div class="col-sm-4">
             <div class="row">
