@@ -5,8 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-
+import javax.persistence.OneToMany;
+import java.util.List;
  
 @Entity
 public class Category {
@@ -18,9 +18,9 @@ public class Category {
 	private String type;
 	private String necktype;
 	private int pockets;
-	@OneToOne
+	@OneToMany
 	@JoinColumn(name="pid")
-	private Product product;
+	private List<Product> product;
 	
 	public int getPockets() {
 		return pockets;
@@ -58,10 +58,10 @@ public class Category {
 	public void setIdealfor(String idealfor) {
 		this.idealfor = idealfor;
 	}
-	public void setProduct(Product product){
+	public void setProduct(List<Product> product){
 		this.product=product;
 	}
-	public Product getProduct(Product product){
+	public List<Product> getProduct(){
 		return product;
 	}
 
