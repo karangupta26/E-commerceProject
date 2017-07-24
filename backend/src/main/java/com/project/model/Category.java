@@ -13,9 +13,10 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cid;
+	private String type;
 	private String idealfor;
 	private String sleeve;
-	private String type;
+	
 	private String necktype;
 	private int pockets;
 	@OneToMany
