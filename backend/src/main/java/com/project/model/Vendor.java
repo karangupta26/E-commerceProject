@@ -12,6 +12,12 @@ public class Vendor {
 	private int id;
 	private String username;
 	private String password;
+	public void setId(int id){
+		this.id=id;
+	}
+	public int getId(){
+		return id;
+	}
 	public String getPassword() {
 		return password;
 	}
