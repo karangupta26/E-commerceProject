@@ -6,16 +6,14 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import com.project.model.Product;
-@Repository
+@Repository("ProductDao")
+@EnableTransactionManagement
 public class ProductDaoImpl implements ProductDao {
 
-	public List<Product> getAllProducts() {
-		Session session=sessionFactory.getCurrentSession();
-		List<Product> products=session.createQuery("from Product").getResultList();
-		return products;
-	}
+	
 	@Autowired
 	private SessionFactory sessionFactory;
 	public Product getProductById(int productId) {
@@ -43,9 +41,14 @@ public class ProductDaoImpl implements ProductDao {
 		
 	}
 
-	public List<Product> getAllProductsByCategory(String category) {
+	public List<Product> getAllProductsByCategory(int cid) {
 		Session session=sessionFactory.getCurrentSession();
-		List<Product> products=session.createQuery("from Product where category='"+category+"'").getResultList();
+		List<Product> products=session.createQuery("from Product where category='"+cid+"'").getResultList();
+		return products;
+	}
+	public List<Product> getAllProducts() {
+		Session session=sessionFactory.getCurrentSession();
+		List<Product> products=session.createQuery("from Product").getResultList();
 		return products;
 	}
 

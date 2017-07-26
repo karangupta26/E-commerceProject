@@ -1,6 +1,8 @@
 package com.project.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,40 +15,10 @@ public class Category {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cid;
-	private String type;
 	private String idealfor;
-	private String sleeve;
-	
-	private String necktype;
-	private int pockets;
-	@OneToMany
-	@JoinColumn(name="pid")
+	@OneToMany(targetEntity=Product.class)
+	//@JoinColumn(name="pid")
 	private List<Product> product;
-	
-	public int getPockets() {
-		return pockets;
-	}
-	public void setPockets(int pockets) {
-		this.pockets = pockets;
-	}
-	public String getNecktype() {
-		return necktype;
-	}
-	public void setNecktype(String necktype) {
-		this.necktype = necktype;
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
-	public String getSleeve() {
-		return sleeve;
-	}
-	public void setSleeve(String sleeve) {
-		this.sleeve = sleeve;
-	}
 	public int getCid() {
 		return cid;
 	}

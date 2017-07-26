@@ -11,7 +11,9 @@ import javax.persistence.ManyToOne;
 public class Product {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	int pid;
+	private int pid;
+	private int qty;
+	private String productname;
 	private String modelDetails;
 	private String pattern;
 	private String styleType;
@@ -19,10 +21,32 @@ public class Product {
 	private String styleCode;
 	private String color;
 	private String fabriccare;
+	private String type;
+	private String sleeve;
+	private String necktype;
+	private int pockets;
 	private double price;
 	@ManyToOne
-	@JoinColumn(name="cid")
+	@JoinColumn(name="cid",referencedColumnName="cid")
 	private Category category;
+	public int getQty() {
+		return qty;
+	}
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
+	public String getSleeve() {
+		return sleeve;
+	}
+	public void setSleeve(String sleeve) {
+		this.sleeve = sleeve;
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
 	public double getPrice() {
 		return price;
 	}
@@ -70,5 +94,23 @@ public class Product {
 	}
 	public void setModelDetails(String modelDetails) {
 		this.modelDetails = modelDetails;
+	}
+	public String getNecktype() {
+		return necktype;
+	}
+	public void setNecktype(String necktype) {
+		this.necktype = necktype;
+	}
+	public int getPockets() {
+		return pockets;
+	}
+	public void setPockets(int pockets) {
+		this.pockets = pockets;
+	}
+	public String getProductname() {
+		return productname;
+	}
+	public void setProductname(String productname) {
+		this.productname = productname;
 	}
 }
