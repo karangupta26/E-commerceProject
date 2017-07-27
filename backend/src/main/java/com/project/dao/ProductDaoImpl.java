@@ -23,6 +23,7 @@ public class ProductDaoImpl implements ProductDao {
 	}
 
 	public void addProduct(Product product) {
+		System.out.println("Product Dao Impl ");
 		Session session=sessionFactory.getCurrentSession();
 		session.save(product);
 		

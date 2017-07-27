@@ -2,6 +2,7 @@ package com.project.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -14,12 +15,15 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 	@RequestMapping("/ProductForm")
-	public String productForm() {
+	public String productForm(Model model ) {
+		System.out.println("Product form");
+		model.addAttribute("product", new Product());
 		return "ProductForm";
 	}
 	@RequestMapping("/saveproduct")
 	public String saveProduct(@ModelAttribute(name="product") Product product){
+		System.out.println("Save product");
 		productService.addProduct(product);
-	return "Home";
+		return "Home";
 	}
 }
