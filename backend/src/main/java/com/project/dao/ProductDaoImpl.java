@@ -18,7 +18,7 @@ public class ProductDaoImpl implements ProductDao {
 	private SessionFactory sessionFactory;
 	public Product getProductById(int productId) {
 		Session session=sessionFactory.getCurrentSession();
-		Product product=(Product)session.createQuery("from Product where id="+productId).getSingleResult();
+		Product product=(Product)session.createQuery("from Product where id="+productId);
 		return product;
 	}
 
@@ -36,19 +36,19 @@ public class ProductDaoImpl implements ProductDao {
 
 	public void deleteProduct(int productId) {
 		Session session=sessionFactory.getCurrentSession();
-		Product product=(Product)session.createQuery("from Product where productId="+productId).getSingleResult();
+		Product product=(Product)session.createQuery("from Product where productId="+productId);
 		session.delete(product);
 		
 	}
 
 	public List<Product> getAllProductsByCategory(int cid) {
 		Session session=sessionFactory.getCurrentSession();
-		List<Product> products=session.createQuery("from Product where category='"+cid+"'").getResultList();
+		List<Product> products=session.createQuery("from Product where category='"+cid+"'").list();
 		return products;
 	}
 	public List<Product> getAllProducts() {
 		Session session=sessionFactory.getCurrentSession();
-		List<Product> products=session.createQuery("from Product").getResultList();
+		List<Product> products=session.createQuery("from Product").list();
 		return products;
 	}
 
