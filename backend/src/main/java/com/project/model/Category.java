@@ -1,12 +1,9 @@
 package com.project.model;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import java.util.List;
  
@@ -16,8 +13,7 @@ public class Category {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cid;
 	private String idealfor;
-	@OneToMany(targetEntity=Product.class)
-	//@JoinColumn(name="pid")
+	@OneToMany(mappedBy="category")
 	private List<Product> product;
 	public int getCid() {
 		return cid;

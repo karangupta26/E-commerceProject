@@ -27,7 +27,7 @@ public class Product {
 	private int pockets;
 	private double price;
 	@ManyToOne
-	@JoinColumn(name="cid",referencedColumnName="cid")
+	@JoinColumn(name="cid")
 	private Category category;
 	public int getQty() {
 		return qty;
