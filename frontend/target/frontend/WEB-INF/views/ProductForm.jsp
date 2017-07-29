@@ -1,12 +1,80 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Product Form</title>
 </head>
 <body>
+<jsp:include page="Header.jsp"></jsp:include>
+<!-- Product insertion -->
+<c:url var="SaveProduct" value='/saveproduct' />
+<form:form action="${SaveProduct}" method="post" modelattribute="product">
+<div class="form-group">
+<form:hidden path="id" class="form-control" />
+</div>
+<div class="form-group">
+Enter Model Details:
+<form:input path="modeldetails" class="form-control" />
+</div>
+<div class="form-group">
+Enter Product Name:
+<form:input path="productname" class="form-control" />
+</div>
+<div class="form-group">
+Enter Price:
+<form:input path="price" class="form-control" />
+</div>
+<div class="form-group">
+Enter Quantity:
+<form:input path="qty" class="form-control" />
+</div>
+<div class="form-group">
+Enter Patter:
+<form:input path="pattern" class="form-control" />
+</div>
+<div class="form-group">
+Enter Style Type:
+<form:input path="styleType" class="form-control" />
+</div>
+<div class="form-group">
+Enter Wear Type
+<form:input path="wearType" class="form-control" />
+</div>
+<div class="form-group">
+Enter Style Code:
+<form:input path="styleCode" class="form-control" />
+</div>
+<div class="form-group">
+Enter Colour:
+<form:input path="color" class="form-control" />
+</div>
+<div class="form-group">
+Enter Fabric Care:
+<form:input path="fabriccare" class="form-control" />
+</div>
+<div class="form-group">
+Type:
+<form:input path="type" class="form-control" />
+</div>
+<div class="form-group">
+Sleeve:
+<form:input path="sleeve" class="form-control" />
+</div>
+<div class="form-group">
+Enter Neck Type:
+<form:input path="necktype" class="form-control" />
+</div>
+<div class="form-group">
+Enter Pockets:
+<form:input path="pockets" class="form-control" />
+</div>
+</form:form>
 
+<jsp:include page="Footer.jsp"></jsp:include>
 </body>
 </html>
