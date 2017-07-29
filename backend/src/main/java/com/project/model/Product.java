@@ -6,6 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Product {
@@ -26,7 +27,11 @@ public class Product {
 	private String necktype;
 	private int pockets;
 	private double price;
+<<<<<<< HEAD
 	@ManyToOne
+=======
+	@OneToOne
+>>>>>>> origin/master
 	@JoinColumn(name="cid")
 	private Category category;
 	public int getQty() {
