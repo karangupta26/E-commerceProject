@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.project.model.Product;
 @Repository("ProductDao")
 @EnableTransactionManagement
-public class ProductDaoImpl implements ProductDao {
+public class ProductDAOImpl implements ProductDAO {
 
 	
 	@Autowired

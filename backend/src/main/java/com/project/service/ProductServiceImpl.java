@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.project.dao.ProductDao;
+import com.project.dao.ProductDAO;
 import com.project.model.Product;
 
 @Service
@@ -14,7 +14,7 @@ import com.project.model.Product;
 public class ProductServiceImpl implements ProductService{
 	
 	@Autowired
-	private ProductDao productDao;
+	private ProductDAO productDao;
 
 	public List<Product> getAllProducts() {
 		return productDao.getAllProducts();

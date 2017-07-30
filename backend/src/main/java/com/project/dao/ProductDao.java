@@ -3,7 +3,7 @@ package com.project.dao;
 import com.project.model.*;
 import java.util.List;
 
-public interface ProductDao {
+public interface ProductDAO {
 	public List<Product> getAllProducts();
 	public Product getProductById(int productId);
 	public void addProduct(Product product);
