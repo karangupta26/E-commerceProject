@@ -78,7 +78,7 @@
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav nav-pills"  role="tablist">
-				<li><a href="#"> Home</a></li>
+				<li><a href="<c:url value="redirect:Home"/>"> Home</a></li>
 				<li><a href="#"> Men</a></li>
 				<li><a href="#"> Women</a></li>
 				<li><a href="#"> Boys</a></li>
