@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<base href="resources\images\" target="_blank">
 	<link rel="stylesheet" type="text/css" href="resources\tools\CustomStyle.css">
 	<style type="text/css">
 	section{
@@ -30,7 +29,7 @@
 	<div class="row">
 	<div class="col-xs-1">
 	<div class="navbar-header">
-		<img src="Logo1.jpeg" alt="FG" class="img-rounded"  width="120" height="50"></img>
+		<img src="images/Logo1.jpeg" alt="FG" class="img-rounded"  width="120" height="50"></img>
 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>

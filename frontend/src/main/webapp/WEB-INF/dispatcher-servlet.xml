@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:context="http://www.springframework.org/schema/context"
@@ -17,5 +17,7 @@
    		<property name="prefix" value="/WEB-INF/views/"></property>
         <property name="suffix" value=".jsp"></property>
       </bean>
-      <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"></mvc:resources>
+      <!-- <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"></mvc:resources> -->
+      <mvc:resources location="/WEB-INF/resources/images/" mapping="/images/**"></mvc:resources>
+      <mvc:resources location="/WEB-INF/resources/tools/" mapping="/tools/**"></mvc:resources> 
 </beans>

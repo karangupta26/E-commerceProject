@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<base href="resources\images\" target="_blank">
 	<link rel="stylesheet" type="text/css" href="resources/tools/CustomStyle.css">
 	<style type="text/css">
 	
@@ -31,19 +30,19 @@
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img class="img-responsive center-block" src="sale.jpg" alt="SALE" id="img">
+      <img class="img-responsive center-block" src="images/sale.jpg" alt="SALE" id="img">
     </div>
 
     <div class="item">
-      <img class="img-responsive center-block" src="womensale.jpg" alt="WOMEN CLOTHING" id="img">
+      <img class="img-responsive center-block" src="images/womensale.jpg" alt="WOMEN CLOTHING" id="img">
     </div>
 
     <div class="item">
-      <img class="img-responsive center-block" src="Mens.jpg" alt="MENS CLOTHING" id="img">
+      <img class="img-responsive center-block" src="images/Mens.jpg" alt="MENS CLOTHING" id="img">
     </div>
 
     <div class="item">
-      <img class="img-responsive center-block" src="kids.jpg" alt="KIDS CLOTHING" id="img">
+      <img class="img-responsive center-block" src="images/kids.jpg" alt="KIDS CLOTHING" id="img">
     </div>
   </div>
 
