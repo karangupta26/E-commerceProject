@@ -30,88 +30,102 @@ public class Product {
 	@ManyToOne
 	@JoinColumn(name="cid")
 	private Category category;
+	public int getPid() {
+		return pid;
+	}
 	public int getQty() {
 		return qty;
-	}
-	public void setQty(int qty) {
-		this.qty = qty;
-	}
-	public String getSleeve() {
-		return sleeve;
-	}
-	public void setSleeve(String sleeve) {
-		this.sleeve = sleeve;
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
-	public double getPrice() {
-		return price;
-	}
-	public void setPrice(double price) {
-		this.price = price;
-	}
-	public String getFabriccare() {
-		return fabriccare;
-	}
-	public void setFabriccare(String fabriccare) {
-		this.fabriccare = fabriccare;
-	}
-	public String getColor() {
-		return color;
-	}
-	public void setColor(String color) {
-		this.color = color;
-	}
-	public String getStyleCode() {
-		return styleCode;
-	}
-	public void setStyleCode(String styleCode) {
-		this.styleCode = styleCode;
-	}
-	public String getWeartype() {
-		return weartype;
-	}
-	public void setWeartype(String weartype) {
-		this.weartype = weartype;
-	}
-	public String getStyleType() {
-		return styleType;
-	}
-	public void setStyleType(String styleType) {
-		this.styleType = styleType;
-	}
-	public String getPattern() {
-		return pattern;
-	}
-	public void setPattern(String pattern) {
-		this.pattern = pattern;
-	}
-	public String getModelDetails() {
-		return modelDetails;
-	}
-	public void setModelDetails(String modelDetails) {
-		this.modelDetails = modelDetails;
-	}
-	public String getNecktype() {
-		return necktype;
-	}
-	public void setNecktype(String necktype) {
-		this.necktype = necktype;
-	}
-	public int getPockets() {
-		return pockets;
-	}
-	public void setPockets(int pockets) {
-		this.pockets = pockets;
 	}
 	public String getProductname() {
 		return productname;
 	}
+	public String getModelDetails() {
+		return modelDetails;
+	}
+	public String getPattern() {
+		return pattern;
+	}
+	public String getStyleType() {
+		return styleType;
+	}
+	public String getWeartype() {
+		return weartype;
+	}
+	public String getStyleCode() {
+		return styleCode;
+	}
+	public String getColor() {
+		return color;
+	}
+	public String getFabriccare() {
+		return fabriccare;
+	}
+	public String getType() {
+		return type;
+	}
+	public String getSleeve() {
+		return sleeve;
+	}
+	public String getNecktype() {
+		return necktype;
+	}
+	public int getPockets() {
+		return pockets;
+	}
+	public double getPrice() {
+		return price;
+	}
+	public Category getCategory() {
+		return category;
+	}
+	public void setPid(int pid) {
+		this.pid = pid;
+	}
+	public void setQty(int qty) {
+		this.qty = qty;
+	}
 	public void setProductname(String productname) {
 		this.productname = productname;
 	}
+	public void setModelDetails(String modelDetails) {
+		this.modelDetails = modelDetails;
+	}
+	public void setPattern(String pattern) {
+		this.pattern = pattern;
+	}
+	public void setStyleType(String styleType) {
+		this.styleType = styleType;
+	}
+	public void setWeartype(String weartype) {
+		this.weartype = weartype;
+	}
+	public void setStyleCode(String styleCode) {
+		this.styleCode = styleCode;
+	}
+	public void setColor(String color) {
+		this.color = color;
+	}
+	public void setFabriccare(String fabriccare) {
+		this.fabriccare = fabriccare;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public void setSleeve(String sleeve) {
+		this.sleeve = sleeve;
+	}
+	public void setNecktype(String necktype) {
+		this.necktype = necktype;
+	}
+	public void setPockets(int pockets) {
+		this.pockets = pockets;
+	}
+	public void setPrice(double price) {
+		this.price = price;
+	}
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+	
+	
 }

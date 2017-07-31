@@ -12,14 +12,14 @@
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
 <!-- Product insertion -->
-<!--<c:url var="Url" value='/saveproduct' />-->
-<form:form action="saveproduct" modelattribute="product">
+<c:url var="url" value='/saveproduct' />
+<form:form action="${url }" modelattribute="product">
 <div class="form-group">
 <form:hidden path="pid" class="form-control" />
 </div>
 <div class="form-group">
 Enter Model Details:
-<form:input path="modeldetails" class="form-control" />
+<form:input path="modelDetails" class="form-control" />
 </div>
 <div class="form-group">
 Enter Product Name:
@@ -43,7 +43,7 @@ Enter Style Type:
 </div>
 <div class="form-group">
 Enter Wear Type
-<form:input path="wearType" class="form-control" />
+<form:input path="weartype" class="form-control" />
 </div>
 <div class="form-group">
 Enter Style Code:
@@ -72,6 +72,14 @@ Enter Neck Type:
 <div class="form-group">
 Enter Pockets:
 <form:input path="pockets" class="form-control" />
+</div>
+<div class="form-group">
+Enter Pockets:
+<form:input path="price" class="form-control" />
+</div>
+<div class="form-group">
+<input type="submit" value="Add Product">
+
 </div>
 </form:form>
 

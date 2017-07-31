@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.project.service.ProductService;
@@ -20,9 +19,10 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 	@RequestMapping(value="/ProductForm")
-	public ModelAndView productForm() {
-		//model.addAttribute("product", new Product());
-		return new ModelAndView("ProductFrom","product",new Product());
+	public String productForm(Model model) {
+		model.addAttribute("product", new Product());
+		//return new ModelAndView("ProductFrom","Product",new Product());
+		return "ProductForm";
 	}
 	@RequestMapping(value="/saveproduct")
 	public String saveProduct(@ModelAttribute(name="product") Product product,BindingResult result){
