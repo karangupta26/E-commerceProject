@@ -81,13 +81,9 @@ Enter Pockets:
 <div class="form-group">
 <form:hidden path="category.cid" class="form-control" />
 Ideal For:
-<form:select path="category.idealfor" class="form-control">
-<form:option value="None" label="select" />
-<form:options items="${categoryList}"></form:options>
-<%-- <form:option value="Womens" label="Womens" /> --%>
-<%-- <form:option value="Boys" label="Boys" /> --%>
-<%-- <form:option value="Girls" label="Girls" /> --%>
-</form:select>
+<a:forEach items="${categoryList}" var="c">
+<form:radiobutton path="category.idealfor" value="c.categoryList"/>${c.idealfor}
+</a:forEach>
 </div>
 <div class="form-group">
 <input type="submit" value="Add Product">
