@@ -79,8 +79,18 @@ Enter Pockets:
 <form:input path="price" class="form-control" />
 </div>
 <div class="form-group">
+<form:hidden path="category.cid" class="form-control" />
+Ideal For:
+<form:select path="category.idealfor" class="form-control">
+<form:option value="None" label="select" />
+<form:options items="${categoryList}"></form:options>
+<%-- <form:option value="Womens" label="Womens" /> --%>
+<%-- <form:option value="Boys" label="Boys" /> --%>
+<%-- <form:option value="Girls" label="Girls" /> --%>
+</form:select>
+</div>
+<div class="form-group">
 <input type="submit" value="Add Product">
-
 </div>
 </form:form>
 
