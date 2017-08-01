@@ -5,6 +5,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.Session;
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
@@ -57,4 +58,5 @@ public class ShippingAddress {
 	public void setZipcode(String zipcode) {
 		this.zipcode = zipcode;
 	}
+	
 }

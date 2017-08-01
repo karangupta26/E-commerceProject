@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.project.dao.ProductDAO;
+import com.project.model.Category;
 import com.project.model.Product;
 
 @Service
@@ -41,5 +42,9 @@ public class ProductServiceImpl implements ProductService{
 
 	public List<Product> getAllProductsByCategory(int cid) {
 		return productDao.getAllProductsByCategory(cid);
+	}
+
+	public List<Category> getAllCategory() {
+		return productDao.getAllCategory();
 	}
 }

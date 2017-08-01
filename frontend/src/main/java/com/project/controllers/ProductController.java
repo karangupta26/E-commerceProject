@@ -23,8 +23,10 @@ public class ProductController {
 	private ProductService productService;
 	@RequestMapping(value="/ProductForm")
 	public String productForm(Model model) {
-		model.addAttribute("categories", new Category());
+		List<Category> categoryList=productService.getAllCategory();
+		model.addAttribute("categoryList",categoryList);
 		model.addAttribute("product", new Product());
+		System.out.println(categoryList.toString().isEmpty());
 		//return new ModelAndView("ProductFrom","Product",new Product());
 		return "ProductForm";
 	}
@@ -33,13 +35,12 @@ public class ProductController {
 		productService.addProduct(product);
 		return "Home";
 	}
-	@ModelAttribute("categoryList")
-	public List<String> getCategoryList (){
+	/*public List<String> getCategoryList (){
 		List<String> categoryList=new ArrayList<String>();
 		categoryList.add("Mens");
 		categoryList.add("Womens");
 		categoryList.add("Boys");
 		categoryList.add("Girls");
 		return categoryList;
-	}
+	}*/
 }

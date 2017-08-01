@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import com.project.model.Category;
 import com.project.model.Product;
 @Repository("ProductDao")
 @EnableTransactionManagement
@@ -20,12 +21,6 @@ public class ProductDAOImpl implements ProductDAO {
 		Session session=sessionFactory.getCurrentSession();
 		Product product=(Product)session.createQuery("from Product where id="+productId);
 		return product;
-	}
-
-	public void addProduct(Product product) {
-		Session session=sessionFactory.getCurrentSession();
-		session.save(product);
-		
 	}
 
 	public void updateProduct(Product product) {
@@ -50,6 +45,13 @@ public class ProductDAOImpl implements ProductDAO {
 		Session session=sessionFactory.getCurrentSession();
 		List<Product> products=session.createQuery("from Product").list();
 		return products;
+	}
+
+	public List<Category> getAllCategory() {
+		Session session=sessionFactory.getCurrentSession();
+		List<Category> categories=session.createQuery("from Category").list();
+		System.out.println(categories.size());
+		return categories;
 	}
 
 }

@@ -79,11 +79,12 @@ Enter Pockets:
 <form:input path="price" class="form-control" />
 </div>
 <div class="form-group">
-<form:hidden path="category.cid" class="form-control" />
 Ideal For:
+<form:select path="category.cid">
 <a:forEach items="${categoryList}" var="c">
-<form:radiobutton path="category.idealfor" value="c.categoryList"/>${c.idealfor}
+<form:option value="${c.cid2_}">${c.idealfor2_}</form:option>
 </a:forEach>
+</form:select>
 </div>
 <div class="form-group">
 <input type="submit" value="Add Product">

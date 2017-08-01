@@ -14,7 +14,7 @@ public class Category {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int cid;
 	private String idealfor;
-	@OneToMany(mappedBy="category",cascade=CascadeType.ALL)
+	@OneToMany(cascade=CascadeType.ALL)
 	private List<Product> product;
 	public int getCid() {
 		return cid;
@@ -33,6 +33,10 @@ public class Category {
 	}
 	public List<Product> getProduct(){
 		return product;
+	}
+	@Override
+	public String toString(){
+		return this.idealfor+" "+this.cid;
 	}
 
 }
