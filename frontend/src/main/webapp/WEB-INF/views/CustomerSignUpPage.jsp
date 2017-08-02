@@ -28,6 +28,10 @@ Enter Email:
 <form:input path="email"/>
 </div>
 <div class="form-group">
+Enter Password:
+<form:input path="password"/>
+</div>
+<div class="form-group">
 Enter Phone:
 <form:input path="phone"/>
 </div>
@@ -70,6 +74,9 @@ Enter Shipping country:
 <div class="form-group">
 Enter Shipping Zip Code:
 <form:input path="shippingAddress.zipcode"/>
+</div>
+<div class="form-group">
+<input type="submit" value="Sign Up">
 </div>
 </form:form>
 <jsp:include page="Footer.jsp"></jsp:include>

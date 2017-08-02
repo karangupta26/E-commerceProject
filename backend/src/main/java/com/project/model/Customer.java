@@ -23,6 +23,8 @@ public class Customer {
 	@Column(unique=true,nullable=false)
 	private String email;
 	@NotEmpty
+	private String Password;
+	@NotEmpty
 	private long phone;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="id")
@@ -56,6 +58,12 @@ public class Customer {
 	}
 	public String getEmail() {
 		return email;
+	}
+	public String getPassword() {
+		return Password;
+	}
+	public void setPassword(String password) {
+		Password = password;
 	}
 	public void setEmail(String email) {
 		this.email = email;
