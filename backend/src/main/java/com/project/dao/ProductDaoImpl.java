@@ -54,4 +54,10 @@ public class ProductDAOImpl implements ProductDAO {
 		return categories;
 	}
 
+	public void addProduct(Product product) {
+		Session session=sessionFactory.getCurrentSession();
+		session.save(product); 
+		
+	}
+
 }

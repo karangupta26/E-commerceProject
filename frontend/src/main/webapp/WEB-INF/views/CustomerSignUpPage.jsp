@@ -6,11 +6,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+
+<title>Customer Sign up</title>
 </head>
 <body>
-<c:url var="url" value="/registercustmer"/>
-<form:form action="${url }" modelAttribute="customer">
+<jsp:include page="Header.jsp"></jsp:include>
+<c:url var="url" value="registercustmer"/>
+<form:form action="${url}" modelAttribute="customer">
 <div class="form-group">
 First Name:
 <form:input path="firstname"/>
@@ -28,47 +38,46 @@ Enter Phone:
 <form:input path="phone"/>
 </div>
 <div class="form-group">
-Enter Address:
+Enter Billing Address:
 <form:input path="billingAddress.Address"/>
 </div>
 <div class="form-group">
-Enter Address:
+Enter Billing City:
 <form:input path="billingAddress.city"/>
 </div>
 <div class="form-group">
-Enter Address:
+Enter Billing State:
 <form:input path="billingAddress.state"/>
 </div>
 <div class="form-group">
-Enter Address:
+Enter Billing Country:
 <form:input path="billingAddress.country"/>
 </div>
 <div class="form-group">
-Enter Address:
+Enter Billing Zip Code:
 <form:input path="billingAddress.zipcode"/>
 </div>
 <div class="form-group">
-Enter Address:
+Enter Shipping Address:
 <form:input path="shippingAddress.Address"/>
 </div>
 <div class="form-group">
-Enter Address:
+Enter Shipping City:
 <form:input path="shippingAddress.city"/>
 </div>
 <div class="form-group">
-Enter Address:
+Enter Shipping State:
 <form:input path="shippingAddress.state"/>
 </div>
 <div class="form-group">
-Enter Address:
+Enter Shipping country:
 <form:input path="shippingAddress.country"/>
 </div>
 <div class="form-group">
-Enter Address:
+Enter Shipping Zip Code:
 <form:input path="shippingAddress.zipcode"/>
 </div>
 </form:form>
-
-
+<jsp:include page="Footer.jsp"></jsp:include>
 </body>
 </html>

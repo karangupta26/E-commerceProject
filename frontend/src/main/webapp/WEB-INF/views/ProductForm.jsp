@@ -80,10 +80,11 @@ Enter Pockets:
 </div>
 <div class="form-group">
 Ideal For:
-<form:select path="category.cid">
-<a:forEach items="${categoryList}" var="c">
-<form:option value="${c.cid2_}">${c.idealfor2_}</form:option>
-</a:forEach>
+<form:select path="category.id">
+<form:option value="1">Mens</form:option>
+<form:option value="2">Womens</form:option>
+<form:option value="3">Boys</form:option>
+<form:option value="4">Girls</form:option>
 </form:select>
 </div>
 <div class="form-group">

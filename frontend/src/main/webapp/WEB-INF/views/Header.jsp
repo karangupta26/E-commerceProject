@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="resources\tools\CustomStyle.css">
 	<style type="text/css">
 	section{
 	background-color:#d9d9d9;
@@ -17,11 +16,9 @@
 	.navbar{
 		background-color:#d9d9d9;
 	}
-	
-		
 	</style>
 </head>
-<body>
+
 <header>
 
 <nav class="navbar-inverse navbar-fixed-top" role="navigation">
@@ -85,11 +82,10 @@
 			</ul>
 			<ul class="nav navbar-nav navbar-right nav-pills" role="tablist">
 				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
-				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
+				<li><a href="<c:url value="/CustomerForm"/>"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
 			</ul>
 		</div>
 	</div>
 </nav>
 </header>
-</body>
 </html>

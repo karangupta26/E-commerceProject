@@ -1,6 +1,5 @@
 package com.project.controllers;
 
-import java.util.ArrayList;
 import java.util.List;
 
 //import javax.servlet.http.HttpServletRequest;
@@ -23,11 +22,10 @@ public class ProductController {
 	private ProductService productService;
 	@RequestMapping(value="/ProductForm")
 	public String productForm(Model model) {
-		List<Category> categoryList=productService.getAllCategory();
-		model.addAttribute("categoryList",categoryList);
+		List<Category> categories=productService.getAllCategory();
+		model.addAttribute("categories",categories);
 		model.addAttribute("product", new Product());
-		System.out.println(categoryList.toString().isEmpty());
-		//return new ModelAndView("ProductFrom","Product",new Product());
+		System.out.println(categories);
 		return "ProductForm";
 	}
 	@RequestMapping(value="/saveproduct")
@@ -35,12 +33,5 @@ public class ProductController {
 		productService.addProduct(product);
 		return "Home";
 	}
-	/*public List<String> getCategoryList (){
-		List<String> categoryList=new ArrayList<String>();
-		categoryList.add("Mens");
-		categoryList.add("Womens");
-		categoryList.add("Boys");
-		categoryList.add("Girls");
-		return categoryList;
-	}*/
+	
 }

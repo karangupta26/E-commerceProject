@@ -12,15 +12,15 @@ import java.util.List;
 public class Category {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int cid;
+	private int id;
 	private String idealfor;
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany(cascade=CascadeType.ALL,mappedBy="category")
 	private List<Product> product;
-	public int getCid() {
-		return cid;
+	public int getId() {
+		return id;
 	}
-	public void setCid(int cid) {
-		this.cid = cid;
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getIdealfor() {
 		return idealfor;
@@ -36,7 +36,7 @@ public class Category {
 	}
 	@Override
 	public String toString(){
-		return this.idealfor+" "+this.cid;
+		return this.idealfor+" "+this.id;
 	}
 
 }
