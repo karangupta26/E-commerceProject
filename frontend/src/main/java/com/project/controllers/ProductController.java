@@ -29,7 +29,10 @@ public class ProductController {
 		return "ProductForm";
 	}
 	@RequestMapping(value="/saveproduct")
-	public String saveProduct(@ModelAttribute(name="product") Product product,BindingResult result){
+	public String saveProduct(@ModelAttribute(name="product") Product product,BindingResult result,Model model){
+		List<Category> categories=productService.getAllCategory();
+		model.addAttribute("categories",categories);
+		model.addAttribute("product", new Product());
 		productService.addProduct(product);
 		return "Home";
 	}

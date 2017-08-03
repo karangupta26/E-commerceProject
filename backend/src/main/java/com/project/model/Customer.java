@@ -7,15 +7,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity
 public class Customer {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int custId;
 	@NotEmpty
 	private String firstname;
@@ -25,7 +27,8 @@ public class Customer {
 	@NotEmpty
 	private String Password;
 	@NotEmpty
-	private long phone;
+	@Size(max=10,min=10)
+	private String phone;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="bid")
 	@Valid
@@ -69,10 +72,11 @@ public class Customer {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public long getPhone() {
+	
+	public String getPhone() {
 		return phone;
 	}
-	public void setPhone(long phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	public BillingAddress getBillingAddress() {

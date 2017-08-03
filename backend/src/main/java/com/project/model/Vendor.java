@@ -8,7 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class Vendor {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int vendorId;
 	private String username;
 	private String password;

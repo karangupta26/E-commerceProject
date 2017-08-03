@@ -19,8 +19,8 @@ public class CustomerController {
 		model.addAttribute("customer",new Customer());
 		return "CustomerSignUpPage";
 	}
-	@RequestMapping()
-	public String regisCustomer(@ModelAttribute Customer customer,BindingResult result){
+	@RequestMapping(value="/registercustomer")
+	public String registerCustomer(@ModelAttribute Customer customer,BindingResult result){
 		customerService.registerCustomer(customer);
 		return "Home";
 	}

@@ -11,7 +11,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 public class ShippingAddress {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int shipId;
 	@NotEmpty
 	private String Address;

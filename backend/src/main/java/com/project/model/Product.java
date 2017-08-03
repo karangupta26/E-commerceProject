@@ -11,7 +11,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Product {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int pid;
 	private int qty;
 	private String productname;
@@ -28,7 +28,7 @@ public class Product {
 	private int pockets;
 	private double price;
 	@ManyToOne
-	@JoinColumn(name="Id")
+	@JoinColumn(name="CatId")
 	private Category category;
 	public int getPid() {
 		return pid;

@@ -1,6 +1,7 @@
 package com.project.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -49,9 +50,8 @@ public class ProductDAOImpl implements ProductDAO {
 
 	public List<Category> getAllCategory() {
 		Session session=sessionFactory.getCurrentSession();
-		List<Category> categories=session.createQuery("from Category").list();
-		System.out.println(categories.size());
-		return categories;
+		List<Category> category=(List)session.createQuery("from Category").list();
+		return category;
 	}
 
 	public void addProduct(Product product) {

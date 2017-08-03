@@ -9,14 +9,21 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form:form >
-<div class=form-group>
-Enter Username:
-<form:input path="username"/>
-</div>
+<jsp:include page="Header.jsp"></jsp:include>
+<form>
+<table> 
+<tr>
+<td>Username:</td>
+<td><input type="text"/></td>
+</tr>
+<tr>
+<td>Password:</td>
+<td><input type="Password"/></td>
 
-
-</form:form>
-
+</tr>
+<tr><td colspan="2"><button type="submit" vale="Log in"></button></td></tr>
+</table>
+</form>
+<jsp:include page="Footer.jsp"></jsp:include>
 </body>
 </html>

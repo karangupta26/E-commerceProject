@@ -13,4 +13,8 @@ public class HomeController {
 	public String aboutUs() {
 		return "AboutUs";
 	}
+	@RequestMapping("")
+	public String login(){
+		return "CustomerLogin";
+	}
 }

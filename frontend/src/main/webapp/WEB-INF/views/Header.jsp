@@ -45,7 +45,7 @@
 	</div>
 	<div class="col-xs-1">
 	<div class="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
-		<form class="navbar-form" role="">
+		<form class="navbar-form" >
 			<div class="form-group">
 				<button type="button" class="btn btn-default">
       				<span class="glyphicon glyphicon-search"></span> Search
@@ -74,14 +74,14 @@
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav nav-pills"  role="tablist">
-				<li><a href="<c:url value="redirect:Home"/>"> Home</a></li>
+				<li><a href="<c:url value="/Home"/>"> Home</a></li>
 				<li><a href="#"> Men</a></li>
 				<li><a href="#"> Women</a></li>
 				<li><a href="#"> Boys</a></li>
 				<li><a href="#"> Girls</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right nav-pills" role="tablist">
-				<li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+				<li><a href="<c:url value="/CustomerLogin"/>"><span class="glyphicon glyphicon-user"></span> Login</a></li>
 				<li><a href="<c:url value="/CustomerForm"/>"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
 			</ul>
 		</div>

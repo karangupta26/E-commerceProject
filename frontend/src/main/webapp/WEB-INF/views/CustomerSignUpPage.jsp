@@ -11,8 +11,8 @@
 </head>
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
-<c:url var="url" value="registercustmer"/>
-<form:form action="${url}" modelAttribute="customer">
+<%-- <c:url var="url" value="registercustomer"/> --%>
+<form:form action="registercustomer" modelAttribute="customer">
 <div class="form-group">
 First Name:
 <form:input path="firstname" class="form-control"/>

@@ -11,10 +11,10 @@ import java.util.List;
 @Entity
 public class Category {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int catId;
 	private String idealfor;
-	@OneToMany(cascade=CascadeType.ALL,mappedBy="category")
+	@OneToMany(cascade=CascadeType.ALL)
 	private List<Product> product;
 	public int getCatId() {
 		return catId;
@@ -33,6 +33,10 @@ public class Category {
 	}
 	public void setProduct(List<Product> product) {
 		this.product = product;
+	}
+	@Override
+	public String toString(){
+		return this.catId+" "+this.idealfor;
 	}
 	
 }

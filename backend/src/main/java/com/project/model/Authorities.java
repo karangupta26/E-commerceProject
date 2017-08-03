@@ -8,7 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class Authorities {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 	private String role;
 	private String username;
