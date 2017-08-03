@@ -12,31 +12,27 @@ import java.util.List;
 public class Category {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int catId;
 	private String idealfor;
 	@OneToMany(cascade=CascadeType.ALL,mappedBy="category")
 	private List<Product> product;
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
+	public int getCatId() {
+		return catId;
 	}
 	public String getIdealfor() {
 		return idealfor;
 	}
+	public List<Product> getProduct() {
+		return product;
+	}
+	public void setCatId(int catId) {
+		this.catId = catId;
+	}
 	public void setIdealfor(String idealfor) {
 		this.idealfor = idealfor;
 	}
-	public void setProduct(List<Product> product){
-		this.product=product;
+	public void setProduct(List<Product> product) {
+		this.product = product;
 	}
-	public List<Product> getProduct(){
-		return product;
-	}
-	@Override
-	public String toString(){
-		return this.idealfor+" "+this.id;
-	}
-
+	
 }

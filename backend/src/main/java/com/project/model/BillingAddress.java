@@ -10,7 +10,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class BillingAddress {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int bid;
 	@NotEmpty
 	private String Address;
 	@NotEmpty
@@ -20,11 +20,11 @@ public class BillingAddress {
 	@NotEmpty
 	private String country;
 	private String zipcode;
-	public int getId() {
-		return id;
+	public int getBid() {
+		return bid;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setBid(int bid) {
+		this.bid = bid;
 	}
 	public String getAddress() {
 		return Address;

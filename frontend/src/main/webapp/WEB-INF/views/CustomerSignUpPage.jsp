@@ -6,9 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
 <title>Customer Sign up</title>
 </head>
 <body>
@@ -17,63 +15,63 @@
 <form:form action="${url}" modelAttribute="customer">
 <div class="form-group">
 First Name:
-<form:input path="firstname"/>
+<form:input path="firstname" class="form-control"/>
 </div>
 <div class="form-group">
 Last Name:
-<form:input path="lastname"/>
+<form:input path="lastname" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Email:
-<form:input path="email"/>
+<form:input path="email" type="email" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Password:
-<form:input path="password"/>
+<form:input path="password" type="password" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Phone:
-<form:input path="phone"/>
+<form:input path="phone" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Billing Address:
-<form:input path="billingAddress.Address"/>
+<form:input path="billingAddress.Address" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Billing City:
-<form:input path="billingAddress.city"/>
+<form:input path="billingAddress.city" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Billing State:
-<form:input path="billingAddress.state"/>
+<form:input path="billingAddress.state" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Billing Country:
-<form:input path="billingAddress.country"/>
+<form:input path="billingAddress.country" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Billing Zip Code:
-<form:input path="billingAddress.zipcode"/>
+<form:input path="billingAddress.zipcode" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Shipping Address:
-<form:input path="shippingAddress.Address"/>
+<form:input path="shippingAddress.Address" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Shipping City:
-<form:input path="shippingAddress.city"/>
+<form:input path="shippingAddress.city" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Shipping State:
-<form:input path="shippingAddress.state"/>
+<form:input path="shippingAddress.state" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Shipping country:
-<form:input path="shippingAddress.country"/>
+<form:input path="shippingAddress.country" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Shipping Zip Code:
-<form:input path="shippingAddress.zipcode"/>
+<form:input path="shippingAddress.zipcode" class="form-control"/>
 </div>
 <div class="form-group">
 <input type="submit" value="Sign Up">

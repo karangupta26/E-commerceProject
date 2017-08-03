@@ -12,7 +12,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class ShippingAddress {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int shipId;
 	@NotEmpty
 	private String Address;
 	@NotEmpty
@@ -22,11 +22,12 @@ public class ShippingAddress {
 	@NotEmpty
 	private String country;
 	private String zipcode;
-	public int getId() {
-		return id;
+	
+	public int getShipId() {
+		return shipId;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setShipId(int shipId) {
+		this.shipId = shipId;
 	}
 	public String getAddress() {
 		return Address;

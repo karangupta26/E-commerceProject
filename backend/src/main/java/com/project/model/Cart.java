@@ -11,16 +11,16 @@ import javax.persistence.OneToOne;
 public class Cart {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int cartId;
 	private double grandTotal;
 	@OneToOne
 	@JoinColumn(name="id")
 	private Customer customer;
-	public int getId() {
-		return id;
+	public int getCartId() {
+		return cartId;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCartId(int cartId) {
+		this.cartId = cartId;
 	}
 	public double getGrandTotal() {
 		return grandTotal;

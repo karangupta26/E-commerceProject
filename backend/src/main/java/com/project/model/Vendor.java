@@ -9,14 +9,15 @@ import javax.persistence.Id;
 public class Vendor {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int vendorId;
 	private String username;
 	private String password;
-	public void setId(int id){
-		this.id=id;
+	
+	public int getVendorId() {
+		return vendorId;
 	}
-	public int getId(){
-		return id;
+	public void setVendorId(int vendorId) {
+		this.vendorId = vendorId;
 	}
 	public String getPassword() {
 		return password;

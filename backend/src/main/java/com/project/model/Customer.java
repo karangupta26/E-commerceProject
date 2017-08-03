@@ -16,7 +16,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class Customer {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;
+	private int custId;
 	@NotEmpty
 	private String firstname;
 	private String lastname;
@@ -27,22 +27,23 @@ public class Customer {
 	@NotEmpty
 	private long phone;
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="id")
+	@JoinColumn(name="bid")
 	@Valid
 	private BillingAddress billingAddress;
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="id")
+	@JoinColumn(name="shipId")
 	@Valid
 	private ShippingAddress shippingAddress;
 	@OneToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="id")
+	@JoinColumn(name="cartId")
 	@Valid
 	private Cart cart;
-	public int getId() {
-		return id;
+	
+	public int getCustId() {
+		return custId;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setCustId(int custId) {
+		this.custId = custId;
 	}
 	public String getFirstname() {
 		return firstname;
