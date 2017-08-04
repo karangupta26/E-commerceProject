@@ -16,24 +16,31 @@ public class Category {
 	private String idealfor;
 	@OneToMany(cascade=CascadeType.ALL)
 	private List<Product> product;
+	
 	public int getCatId() {
 		return catId;
 	}
+
+	public void setCatId(Integer catId) {
+		this.catId = catId;
+	}
+
 	public String getIdealfor() {
 		return idealfor;
 	}
-	public List<Product> getProduct() {
-		return product;
-	}
-	public void setCatId(int catId) {
-		this.catId = catId;
-	}
+
 	public void setIdealfor(String idealfor) {
 		this.idealfor = idealfor;
 	}
+
+	public List<Product> getProduct() {
+		return product;
+	}
+
 	public void setProduct(List<Product> product) {
 		this.product = product;
 	}
+
 	@Override
 	public String toString(){
 		return this.catId+" "+this.idealfor;
