@@ -8,12 +8,16 @@ import org.hibernate.Session;
 import com.project.model.Authorities;
 import com.project.model.Cart;
 import com.project.model.Customer;
+import com.project.model.User;
 @Repository
 public class CustomerDAOImpl implements CustomerDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 	public void registerCustomer(Customer customer) {
-		String username=customer.getEmail();
+		User user=customer.getUser();
+		user.setEnabled(true);
+		String username=customer.getUser().getUsername();
+		
 		Authorities authorities=new Authorities();
 		authorities.setRole("ROLE_CUSTOMER");
 		authorities.setUsername(username);

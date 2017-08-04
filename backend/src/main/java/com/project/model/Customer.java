@@ -24,11 +24,13 @@ public class Customer {
 	private String lastname;
 	@Column(unique=true,nullable=false)
 	private String email;
-	@NotEmpty
-	private String Password;
-	@NotEmpty
+		@NotEmpty
 	@Size(max=10,min=10)
 	private String phone;
+	@OneToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="userId")
+	@Valid
+	private User user;
 	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name="bid")
 	@Valid
@@ -63,11 +65,12 @@ public class Customer {
 	public String getEmail() {
 		return email;
 	}
-	public String getPassword() {
-		return Password;
+	
+	public User getUser() {
+		return user;
 	}
-	public void setPassword(String password) {
-		Password = password;
+	public void setUser(User user) {
+		this.user = user;
 	}
 	public void setEmail(String email) {
 		this.email = email;

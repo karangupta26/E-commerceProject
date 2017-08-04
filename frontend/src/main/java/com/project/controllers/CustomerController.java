@@ -21,6 +21,9 @@ public class CustomerController {
 	}
 	@RequestMapping(value="/registercustomer")
 	public String registerCustomer(@ModelAttribute Customer customer,BindingResult result){
+		if(result.hasErrors()){
+			return "CustomerSignUpPage";
+		}
 		customerService.registerCustomer(customer);
 		return "Home";
 	}

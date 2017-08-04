@@ -80,17 +80,12 @@ Enter Pockets:
 </div>
 <div class="form-group">
 Ideal For:
-<jsp:useBean class="com.project.controllers.HomeController" id="controller">
 <form:select path="category.catId">
-<a:forEach items="${controller.categories} " var="c"  >
+<a:forEach items="${categories} " var="c"  >
 <form:option value="${c.catId}">${c.idealfor}</form:option>
 </a:forEach>
 </form:select>
-
-</jsp:useBean>
-
-
- </div>
+</div>
 <div class="form-group">
 <input type="submit" value="Add Product">
 </div>

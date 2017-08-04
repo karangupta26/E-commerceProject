@@ -7,7 +7,7 @@ import com.project.service.CartItemService;
 import com.project.service.CustomerService;
 import com.project.service.ProductService;
 
-@Controller
+/*@Controller
 public class CartItemController {
 	@Autowired
 	private ProductService productservice;
@@ -17,4 +17,4 @@ public class CartItemController {
 	private CartItemService cartItemService;
 	
 
-}
+}*/

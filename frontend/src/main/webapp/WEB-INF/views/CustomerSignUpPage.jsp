@@ -26,12 +26,16 @@ Enter Email:
 <form:input path="email" type="email" class="form-control"/>
 </div>
 <div class="form-group">
-Enter Password:
-<form:input path="password" type="password" class="form-control"/>
-</div>
-<div class="form-group">
 Enter Phone:
 <form:input path="phone" class="form-control"/>
+</div>
+<div class="form-group">
+Enter UserName:
+<form:input path="user.username" class="form-control"/>
+</div>
+Enter Password:
+<form:input path="user.password" class="form-control" type="password"/>
+<div>
 </div>
 <div class="form-group">
 Enter Billing Address:
