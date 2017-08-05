@@ -1,5 +1,6 @@
 package com.project.dao;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,13 @@ public class VenderDAOImpl implements VenderDAO {
 		session.save(authorities);
 		session.save(vendor);
 		
+	}
+	public User validateUserName(String username) {
+		Session session=sessionFactory.getCurrentSession();
+		Query query=session.createQuery("from user where username=?");
+		query.setString(0, username);
+		User user=(User)query.uniqueResult();
+		return user;
 	}
 
 }

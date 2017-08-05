@@ -24,6 +24,7 @@ Last Name:
 <div class="form-group">
 Enter Email:
 <form:input path="email" type="email" class="form-control"/>
+<p>${duplicateEmail}</p>
 </div>
 <div class="form-group">
 Enter Phone:
@@ -32,6 +33,7 @@ Enter Phone:
 <div class="form-group">
 Enter UserName:
 <form:input path="user.username" class="form-control"/>
+<p>${duplicateUsername}</p>
 </div>
 Enter Password:
 <form:input path="user.password" class="form-control" type="password"/>

@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.project.service.ProductService;
-import com.google.gson.Gson;
 import com.project.model.Category;
 //import com.project.service.ProductServiceImpl;
 import com.project.model.Product;
