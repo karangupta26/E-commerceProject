@@ -14,7 +14,7 @@ public class Category {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int catId;
 	private String idealfor;
-	@OneToMany(cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="category",cascade=CascadeType.ALL)
 	private List<Product> product;
 	
 	public int getCatId() {

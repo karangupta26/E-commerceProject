@@ -16,6 +16,7 @@ public class Product {
 	private int qty;
 	private String productname;
 	private String modelDetails;
+	private String brand;
 	private String pattern;
 	private String styleType;
 	private String weartype;
@@ -33,99 +34,104 @@ public class Product {
 	public int getPid() {
 		return pid;
 	}
-	public int getQty() {
-		return qty;
-	}
-	public String getProductname() {
-		return productname;
-	}
-	public String getModelDetails() {
-		return modelDetails;
-	}
-	public String getPattern() {
-		return pattern;
-	}
-	public String getStyleType() {
-		return styleType;
-	}
-	public String getWeartype() {
-		return weartype;
-	}
-	public String getStyleCode() {
-		return styleCode;
-	}
-	public String getColor() {
-		return color;
-	}
-	public String getFabriccare() {
-		return fabriccare;
-	}
-	public String getType() {
-		return type;
-	}
-	public String getSleeve() {
-		return sleeve;
-	}
-	public String getNecktype() {
-		return necktype;
-	}
-	public int getPockets() {
-		return pockets;
-	}
-	public double getPrice() {
-		return price;
-	}
-	public Category getCategory() {
-		return category;
-	}
 	public void setPid(int pid) {
 		this.pid = pid;
+	}
+	public int getQty() {
+		return qty;
 	}
 	public void setQty(int qty) {
 		this.qty = qty;
 	}
+	public String getProductname() {
+		return productname;
+	}
 	public void setProductname(String productname) {
 		this.productname = productname;
+	}
+	public String getModelDetails() {
+		return modelDetails;
 	}
 	public void setModelDetails(String modelDetails) {
 		this.modelDetails = modelDetails;
 	}
+	public String getBrand() {
+		return brand;
+	}
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+	public String getPattern() {
+		return pattern;
+	}
 	public void setPattern(String pattern) {
 		this.pattern = pattern;
+	}
+	public String getStyleType() {
+		return styleType;
 	}
 	public void setStyleType(String styleType) {
 		this.styleType = styleType;
 	}
+	public String getWeartype() {
+		return weartype;
+	}
 	public void setWeartype(String weartype) {
 		this.weartype = weartype;
+	}
+	public String getStyleCode() {
+		return styleCode;
 	}
 	public void setStyleCode(String styleCode) {
 		this.styleCode = styleCode;
 	}
+	public String getColor() {
+		return color;
+	}
 	public void setColor(String color) {
 		this.color = color;
+	}
+	public String getFabriccare() {
+		return fabriccare;
 	}
 	public void setFabriccare(String fabriccare) {
 		this.fabriccare = fabriccare;
 	}
+	public String getType() {
+		return type;
+	}
 	public void setType(String type) {
 		this.type = type;
+	}
+	public String getSleeve() {
+		return sleeve;
 	}
 	public void setSleeve(String sleeve) {
 		this.sleeve = sleeve;
 	}
+	public String getNecktype() {
+		return necktype;
+	}
 	public void setNecktype(String necktype) {
 		this.necktype = necktype;
+	}
+	public int getPockets() {
+		return pockets;
 	}
 	public void setPockets(int pockets) {
 		this.pockets = pockets;
 	}
+	public double getPrice() {
+		return price;
+	}
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	public Category getCategory() {
+		return category;
 	}
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-	
 	
 }

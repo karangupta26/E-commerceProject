@@ -14,13 +14,15 @@ public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int userId;
-	@Column
+	@Column(unique=true,nullable=false)
 	private String username;
 	@NotEmpty
 	private String password;
 	private boolean enabled;
 	@OneToOne(mappedBy="user")
 	private Customer customer;
+	@OneToOne(mappedBy="vuser")
+	private Vendor vendor;
 	public int getUserId() {
 		return userId;
 	}
@@ -50,5 +52,11 @@ public class User {
 	}
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
+	}
+	public Vendor getVendor() {
+		return vendor;
+	}
+	public void setVendor(Vendor vendor) {
+		this.vendor = vendor;
 	}
 }
