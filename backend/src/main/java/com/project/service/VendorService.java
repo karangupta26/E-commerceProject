@@ -1,5 +1,7 @@
 package com.project.service;
 
-public interface VendorService {
+import com.project.model.Vendor;
 
+public interface VendorService {
+	public void registerVendor(Vendor vendor);
 }

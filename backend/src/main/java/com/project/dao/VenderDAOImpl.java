@@ -23,6 +23,7 @@ public class VenderDAOImpl implements VenderDAO {
 		
 		Session session=sessionFactory.getCurrentSession();
 		session.save(authorities);
+		session.save(vendor);
 		
 	}
 

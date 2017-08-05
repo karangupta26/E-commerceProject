@@ -3,6 +3,7 @@ package com.project.dao;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import com.project.model.Authorities;
@@ -30,6 +31,20 @@ public class CustomerDAOImpl implements CustomerDAO {
 		customer.setCart(cart);
 		session.save(customer);
 		
+	}
+	public User validateUserName(String username) {
+		Session session=sessionFactory.getCurrentSession();
+		Query query=session.createQuery("from user where username=?");
+		query.setString(0, username);
+		User user=(User)query.uniqueResult();
+		return user;
+	}
+	public Customer validateEmail(String email) {
+		Session session=sessionFactory.getCurrentSession();
+		Query query=session.createQuery("from customer where email=?");
+		query.setString(0, email);
+		Customer customer=(Customer)query.uniqueResult();
+		return customer;
 	}
 
 }
