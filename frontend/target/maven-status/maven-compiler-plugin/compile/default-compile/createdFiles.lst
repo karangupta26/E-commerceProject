@@ -1,3 +1,5 @@
-com\project\controllers\ProductController.class
-com\project\controllers\UserController.class
+com\project\controllers\CustomerController.class
 com\project\controllers\HomeController.class
+com\project\controllers\CartItemController.class
+com\project\controllers\VendorController.class
+com\project\controllers\ProductController.class
