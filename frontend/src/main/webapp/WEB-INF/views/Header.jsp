@@ -56,7 +56,7 @@
 	</div>
 	<div class="col-xs-2">
 	<div class="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
-	<p class="navbarfont navbar-text"><b><a href="<c:url value="/Vendor"/>">SELL ON FASHGEN</a></b></p>
+	<p class="navbarfont navbar-text"><b><a href="<c:url value="/ProductForm"/>">SELL ON FASHGEN</a></b></p>
 	</div>
 	</div>
 	</div>

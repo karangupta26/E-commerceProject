@@ -3,6 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="a" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %> 
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,6 +22,10 @@
 <div class="form-group">
 Enter Model Details:
 <form:input path="modelDetails" class="form-control" />
+</div>
+<div class="form-group">
+Enter Brand:
+<form:input path="brand" class="form-control"/>
 </div>
 <div class="form-group">
 Enter Product Name:
@@ -75,15 +80,13 @@ Enter Pockets:
 <form:input path="pockets" class="form-control" />
 </div>
 <div class="form-group">
-Enter Pockets:
+Enter Price:
 <form:input path="price" class="form-control" />
 </div>
 <div class="form-group">
 Ideal For:
 <form:select path="category.catId">
-<a:forEach items="${categories} " var="c"  >
-<form:option value="${c.catId}">${c.idealfor}</form:option>
-</a:forEach>
+<form:options items="${categories}" itemValue="catId" itemLabel="idealfor"/>
 </form:select>
 </div>
 <div class="form-group">
