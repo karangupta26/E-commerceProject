@@ -13,6 +13,7 @@
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
 <!-- Product insertion -->
+<div class="container">
 <%-- <a:url var="url" value='/saveproduct' /> --%>
 <%-- <spring:url value='/saveproduct' var="url"/> --%>
 <form:form action="saveproduct" commandName="product" enctype="multipart/form-data">
@@ -40,7 +41,7 @@ Enter Quantity:
 <form:input path="qty" class="form-control" />
 </div>
 <div class="form-group">
-Enter Patter:
+Enter Pattern:
 <form:input path="pattern" class="form-control" />
 </div>
 <div class="form-group">
@@ -93,7 +94,36 @@ Upload Image
 <input type="submit" value="Add Product">
 </div>
 </form:form>
-
+</div>
+<div class="container-fluid">
+<h3>Product List</h3>
+<a:if test="${!empty productList }">
+	<table class="tg">
+	<tr>
+	<th width="80">Product ID</th>
+	<th width="80">Brand</th>
+	<th width="300">Product Name</th>
+	<th width="80">Price</th>
+	<th width="120">Category</th>
+	<th width="80">Type</th>
+	<th width="100">Operation</th>
+<!-- 	<th></th> -->
+	</tr>
+	<a:forEach items="${productList}" var="prod">
+	<tr>
+	<td>${prod.pid}</td>
+	<td>${prod.brand}</td>
+	<td>${prod.productname}</td>
+	<td>${prod.price}</td>
+	<td>${prod.category.idealfor}</td>
+	<td>${prod.type}</td>
+	<td><a href="<a:url value="/vendor/editProduct/editForm/${prod.pid}"/>">Edit</a>/
+	<a>Delete</a></td>
+	</tr>
+	</a:forEach>	
+	</table>
+</a:if>
+</div>
 <jsp:include page="Footer.jsp"></jsp:include>
 </body>
 </html>
