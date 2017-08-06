@@ -15,7 +15,7 @@
 <!-- Product insertion -->
 <%-- <a:url var="url" value='/saveproduct' /> --%>
 <%-- <spring:url value='/saveproduct' var="url"/> --%>
-<form:form action="saveproduct" commandName="product">
+<form:form action="saveproduct" commandName="product" enctype="multipart/form-data">
 <div class="form-group">
 <form:hidden path="pid" class="form-control" />
 </div>
@@ -80,14 +80,14 @@ Enter Pockets:
 <form:input path="pockets" class="form-control" />
 </div>
 <div class="form-group">
-Enter Price:
-<form:input path="price" class="form-control" />
-</div>
-<div class="form-group">
 Ideal For:
 <form:select path="category.catId">
 <form:options items="${categories}" itemValue="catId" itemLabel="idealfor"/>
 </form:select>
+</div>
+<div class="form-group">
+Upload Image
+<input type="file" name="image">
 </div>
 <div class="form-group">
 <input type="submit" value="Add Product">
