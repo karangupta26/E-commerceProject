@@ -67,5 +67,11 @@ public class ProductController {
 		model.addAttribute("productEdit", product);
 		return "EditProduct";
 	}
+	@RequestMapping(value="/vendor/deleteProduct/{pid}")
+	public String deleteProduct(@PathVariable("pid") int id){
+		productService.deleteProduct(id);
+		return "redirect:/ProductForm";
+	}
+	
 	
 }

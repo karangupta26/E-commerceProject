@@ -118,12 +118,13 @@ Upload Image
 	<td>${prod.category.idealfor}</td>
 	<td>${prod.type}</td>
 	<td><a href="<a:url value="/vendor/editProduct/editForm/${prod.pid}"/>">Edit</a>/
-	<a>Delete</a></td>
+	<a href="<a:url value="/vendor/deleteProduct/${prod.pid}"/>">Delete</a></td>
 	</tr>
 	</a:forEach>	
 	</table>
 </a:if>
 </div>
+<br><br><br>
 <jsp:include page="Footer.jsp"></jsp:include>
 </body>
 </html>

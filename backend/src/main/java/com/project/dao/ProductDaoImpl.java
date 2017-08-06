@@ -20,7 +20,7 @@ public class ProductDAOImpl implements ProductDAO {
 	private SessionFactory sessionFactory;
 	public Product getProductById(int productId) {
 		Session session=sessionFactory.getCurrentSession();
-		Product product=(Product)session.createQuery("from Product where id="+productId);
+		Product product=(Product)session.get(Product.class, productId);
 		return product;
 	}
 
