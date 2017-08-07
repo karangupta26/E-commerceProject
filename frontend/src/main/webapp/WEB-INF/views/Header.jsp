@@ -96,10 +96,10 @@
 				<li><a href="<c:url value="/CustomerLogin"/>"><span class="glyphicon glyphicon-user"></span> Login</a></li>
 				<li><a href="<c:url value="/CustomerForm"/>"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
 				</c:if>
-				<c:url value="/spring_security_logout" var="logoutUrl"></c:url>
-				<c:if test="${pageContext.request.userPrincipal.name!=null }">
-				<p class="navbarfont navbar-text"><a href="${logoutUrl }"><b>LOGOUT</b></a></p>
-				</c:if>
+<%-- 				<c:url value="/spring_security_logout" var="logoutUrl"></c:url> --%>
+<%-- 				<c:if test="${pageContext.request.userPrincipal.name!=null }"> --%>
+<%-- 				<p class="navbarfont navbar-text"><a href="${logoutUrl }"><b>LOGOUT</b></a></p> --%>
+<%-- 				</c:if> --%>
 			</ul>
 		</div>
 	</div>

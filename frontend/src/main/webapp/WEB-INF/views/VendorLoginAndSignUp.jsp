@@ -50,7 +50,7 @@ Enter Password:
  </div>
  <div class="form-group">
  Enter User Name:
- <input name="SpringSecurityPassword"type="password" class="form-control" placeholder="Password">
+ <input name="SpringSecurityPassword" type="password" class="form-control" placeholder="Password">
  </div>
  <div class="wrapper">
 <button class="btn btn-large btn-primary" type="submit" >Sign in</button>

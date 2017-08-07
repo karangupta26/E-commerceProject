@@ -41,7 +41,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 	public Customer validateEmail(String email) {
 		Session session=sessionFactory.getCurrentSession();
-		Query query=session.createQuery("from customer where email=?");
+		Query query=session.createQuery("from Customer where email=?");
 		query.setString(0, email);
 		Customer customer=(Customer)query.uniqueResult();
 		return customer;

@@ -9,6 +9,7 @@
       <security:http auto-config="true">
       <security:csrf disabled="true"/>
       <security:intercept-url pattern="/vendor/**" access="hasRole('ROLE_VENDOR')"/>
+      <security:intercept-url pattern="/customer/**" access="hasRole('ROLE_CUSTOMER')"/>
       <security:intercept-url pattern="/**" access="permitAll"/>
       
       <security:form-login login-page="/Vendor" 
@@ -17,11 +18,18 @@
       default-target-url="/vendor/Product/ProductForm"
       authentication-failure-url="/Vendor"
       />
+      <security:form-login login-page="/CustomerLogin" 
+      username-parameter="SpringSecurityCustomerUsername" password-parameter="SpringSecurityCustomerPassword"
+      login-processing-url="/springsecuritycheck"
+      default-target-url="/Home"
+      authentication-failure-url="/CustomerLogin"
+      />
        
       <security:logout logout-success-url="/Home"
       logout-url="/spring_security_logout"
       />
       </security:http>
+      
       <security:authentication-manager>
       <security:authentication-provider>
       <security:jdbc-user-service data-source-ref="getDataSource"
