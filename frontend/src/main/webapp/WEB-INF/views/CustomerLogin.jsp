@@ -12,8 +12,8 @@
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
 <div class="container">
-<c:url value="/springsecuritycheck" var="cSecurity"></c:url>
-<form class="form-signin"  action="${cSecurity}" method=post>
+<c:url value="/springsecuritycheck" var="security"></c:url>
+<form class="form-signin"  action="${security}" method=post>
  <h3 class="form-signin-heading" align="center">Please sign in</h3>
  <div class="form-group">
  Enter User Name:
