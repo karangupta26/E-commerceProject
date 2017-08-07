@@ -28,7 +28,7 @@ import com.project.model.Product;
 public class ProductController {
 	@Autowired
 	private ProductService productService;
-	@RequestMapping(value="/ProductForm")
+	@RequestMapping(value="/vendor/Product/ProductForm")
 	public String productForm(Model model) {
 		List<Category> catObj=productService.getAllCategory();
 		model.addAttribute("product", new Product());
@@ -37,35 +37,36 @@ public class ProductController {
 		model.addAttribute("productList",productObj);
 		return "ProductForm";
 	}
-	@RequestMapping(value="/saveproduct")
+	@RequestMapping(value="/vendor/Product/saveproduct")
 	public String saveProduct(@Valid @ModelAttribute(name="product") Product product,BindingResult result,Model model){
 		if(result.hasErrors()){
 			List<Category> categories=productService.getAllCategory();
 			model.addAttribute("categories",categories);
 			return "ProductForm";
 		}
-		System.out.println("No errors");
 		productService.addProduct(product);
-		System.out.println("Product Added");
 		MultipartFile image=product.getImage();
-		System.out.println("Image uploading");
 		Path path=Paths.get("C:\\Users\\Karan\\workspace\\frontend\\src\\main\\webapp\\WEB-INF\\resources\\productImages\\"+product.getPid()+".jpeg");
-		System.out.println("Try and catch Block Starts");
 		try{
 			image.transferTo(new File(path.toString()));
-			System.out.println("Image Transfered");
+			
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		System.out.println("Image Uploaded");
-		
 		return "Home";
 	}
 	@RequestMapping(value="/vendor/editProduct/editForm/{pid}")
-	public String EditProduct(@PathVariable("pid") int id,Model model){
+	public String editProductForm(@PathVariable("pid") int id,Model model){
 		Product product=productService.getProductById(id);
 		model.addAttribute("productEdit", product);
+		List<Category> categories=productService.getAllCategory();
+		model.addAttribute("categories",categories);
 		return "EditProduct";
+	}
+	@RequestMapping(value="/vendor/editProduct/editFunction")
+	public String editProduct(@ModelAttribute(name="productEdit") Product product){
+		productService.updateProduct(product);
+		return "redirect:/ProductForm";
 	}
 	@RequestMapping(value="/vendor/deleteProduct/{pid}")
 	public String deleteProduct(@PathVariable("pid") int id){

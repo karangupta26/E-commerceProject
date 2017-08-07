@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/security 
+       http://www.springframework.org/schema/security/spring-security.xsd">
+      <security:http auto-config="true">
+      <security:csrf disabled="true"/>
+      <security:intercept-url pattern="/vendor/**" access="hasRole('ROLE_VENDOR')"/>
+      <security:intercept-url pattern="/**" access="permitAll"/>
+      
+      <security:form-login login-page="/Vendor" 
+      username-parameter="SpringSecurityUsername" password-parameter="SpringSecurityPassword"
+      login-processing-url="/j_spring_security_check"
+      default-target-url="/vendor/Product/ProductForm"
+      authentication-failure-url="/Vendor"
+      />
+       
+      <security:logout logout-success-url="/Home"
+      logout-url="/Home"
+      />
+      </security:http>
+      <security:authentication-manager>
+      <security:authentication-provider>
+      <security:jdbc-user-service data-source-ref="getDataSource"
+      authorities-by-username-query="SELECT username,role FROM authorities where username=?"
+      users-by-username-query="SELECT username,password,enabled FROM user where username=?"
+      />
+      </security:authentication-provider>
+      </security:authentication-manager>
+       </beans>

@@ -14,9 +14,8 @@
 <jsp:include page="Header.jsp"></jsp:include>
 <!-- Product insertion -->
 <div class="container">
-<%-- <a:url var="url" value='/saveproduct' /> --%>
-<%-- <spring:url value='/saveproduct' var="url"/> --%>
-<form:form action="saveproduct" commandName="product" enctype="multipart/form-data">
+<a:url var="url" value="/vendor/Product/saveproduct" />
+<form:form action="${url}" commandName="product" enctype="multipart/form-data">
 <div class="form-group">
 <form:hidden path="pid" class="form-control" />
 </div>

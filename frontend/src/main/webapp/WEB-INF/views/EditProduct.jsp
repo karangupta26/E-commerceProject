@@ -12,31 +12,81 @@
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
 <div class="container">
-<form:form  commandName="productEdit">
+<c:url value="/vendor/editProduct/editFunction" var="url"/>
+<form:form  action="${url}" modelAttribute="productEdit">
 <div class="form-group">
-<form:hidden path="pid"/>
+<form:hidden path="pid" class="form-control" />
 </div>
 <div class="form-group">
 Enter Model Details:
-<form:input path="modelDetails" class="form-control"/>
+<form:input path="modelDetails" class="form-control" />
 </div>
 <div class="form-group">
-Enter brand:
+Enter Brand:
 <form:input path="brand" class="form-control"/>
 </div>
 <div class="form-group">
-Enter Pattern:
-<form:input path="pattern" class="form-control"/>
-</div>
-<div class="form-group">
-Enter Fabric Care:
-<form:input path="fabriccare" class="form-control"/>
+Enter Product Name:
+<form:input path="productname" class="form-control" />
 </div>
 <div class="form-group">
 Enter Price:
-<form:input path="price" class="form-control"/>
+<form:input path="price" class="form-control" />
 </div>
+<div class="form-group">
+Enter Quantity:
+<form:input path="qty" class="form-control" />
+</div>
+<div class="form-group">
+Enter Pattern:
+<form:input path="pattern" class="form-control" />
+</div>
+<div class="form-group">
+Enter Style Type:
+<form:input path="styleType" class="form-control" />
+</div>
+<div class="form-group">
+Enter Wear Type
+<form:input path="weartype" class="form-control" />
+</div>
+<div class="form-group">
+Enter Style Code:
+<form:input path="styleCode" class="form-control" />
+</div>
+<div class="form-group">
+Enter Colour:
+<form:input path="color" class="form-control" />
+</div>
+<div class="form-group">
+Enter Fabric Care:
+<form:input path="fabriccare" class="form-control" />
+</div>
+<div class="form-group">
+Type:
+<form:input path="type" class="form-control" />
+</div>
+<div class="form-group">
+Sleeve:
+<form:input path="sleeve" class="form-control" />
+</div>
+<div class="form-group">
+Enter Neck Type:
+<form:input path="necktype" class="form-control" />
+</div>
+<div class="form-group">
+Enter Pockets:
+<form:input path="pockets" class="form-control" />
+</div>
+<div class="form-group">
+Ideal For:
+<form:select path="category.catId">
+<form:options items="${categories}" itemValue="catId" itemLabel="idealfor"/>
+</form:select>
+</div>
+<div class="form-group">
 <input type="submit" value="Edit Product">
+</div>
+
 </form:form>
 </div>
 <br><br><br>
