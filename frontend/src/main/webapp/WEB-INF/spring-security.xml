@@ -19,7 +19,7 @@
       />
        
       <security:logout logout-success-url="/Home"
-      logout-url="/Home"
+      logout-url="/spring_security_logout"
       />
       </security:http>
       <security:authentication-manager>

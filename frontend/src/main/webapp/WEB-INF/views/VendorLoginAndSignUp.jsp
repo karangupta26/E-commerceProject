@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 <%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html>
@@ -27,6 +28,7 @@
 <div class="form-group">
 Enter User Name:
 <form:input path="vuser.username" class="form-control" placeholder="User Name"/>
+<p>${duplicateVendor}</p>
 </div>
 <div class="form-group">
 Enter Password:
@@ -39,7 +41,7 @@ Enter Password:
  </div>
  
  <div class="col-lg-6">
- <c:url value="/j_spring_security_check" value="security"/>
+ <c:url value="/j_spring_security_check" var="security"/>
 <form class="form-signin" action="${security}" method=post>
  <h3 class="form-signin-heading" align="center">Please sign in</h3>
  <div class="form-group">
@@ -51,8 +53,8 @@ Enter Password:
  <input name="SpringSecurityPassword"type="password" class="form-control" placeholder="Password">
  </div>
  <div class="wrapper">
- <button class="btn btn-large btn-primary" type="submit" >Sign in</button>
- </div> 
+<button class="btn btn-large btn-primary" type="submit" >Sign in</button>
+</div> 
  </form>
  </div>
 </div>

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -56,7 +57,17 @@
 	</div>
 	<div class="col-xs-2">
 	<div class="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
+	<c:if test="${pageContext.request.userPrincipal.name==null }">
 	<p class="navbarfont navbar-text"><b><a href="<c:url value="/Vendor"/>">SELL ON FASHGEN</a></b></p>
+	</c:if>
+	</div>
+	</div>
+	<div class="col-xs-2">
+	<div class="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
+	<c:url value="/spring_security_logout" var="logoutUrl"></c:url>
+	<c:if test="${pageContext.request.userPrincipal.name!=null }">
+	<p class="navbarfont navbar-text"><a href="${logoutUrl }"><b>LOGOUT</b></a></p>
+	</c:if>
 	</div>
 	</div>
 	</div>
@@ -81,8 +92,14 @@
 				<li><a href="#"> Girls</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right nav-pills" role="tablist">
+				<c:if test="${pageContext.request.userPrincipal.name==null }">
 				<li><a href="<c:url value="/CustomerLogin"/>"><span class="glyphicon glyphicon-user"></span> Login</a></li>
 				<li><a href="<c:url value="/CustomerForm"/>"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
+				</c:if>
+				<c:url value="/spring_security_logout" var="logoutUrl"></c:url>
+				<c:if test="${pageContext.request.userPrincipal.name!=null }">
+				<p class="navbarfont navbar-text"><a href="${logoutUrl }"><b>LOGOUT</b></a></p>
+				</c:if>
 			</ul>
 		</div>
 	</div>

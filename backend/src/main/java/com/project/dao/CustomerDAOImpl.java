@@ -34,7 +34,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 	public User validateUserName(String username) {
 		Session session=sessionFactory.getCurrentSession();
-		Query query=session.createQuery("from user where username=?");
+		Query query=session.createQuery("from User where username=?");
 		query.setString(0, username);
 		User user=(User)query.uniqueResult();
 		return user;
