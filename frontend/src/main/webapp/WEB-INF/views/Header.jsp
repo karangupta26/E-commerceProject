@@ -60,6 +60,9 @@
 	<c:if test="${pageContext.request.userPrincipal.name==null }">
 	<p class="navbarfont navbar-text"><b><a href="<c:url value="/Vendor"/>">SELL ON FASHGEN</a></b></p>
 	</c:if>
+	<c:if test="${pageContext.request.userPrincipal.name!=null }">
+	<p class="navbarfont navbar-text"><b><a href="<c:url value="/vendor/Product/ProductForm"/>">PRODUCT OPERATIONS</a></b></p>
+	</c:if>
 	</div>
 	</div>
 	<div class="col-xs-2">
