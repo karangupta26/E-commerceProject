@@ -112,7 +112,7 @@ Upload Image
 	<tr>
 	<td>${prod.pid}</td>
 	<td>${prod.brand}</td>
-	<td>${prod.productname}</td>
+	<td><a href="<a:url value="/product/details/${prod.pid}"/>">${prod.productname}</a></td>
 	<td>${prod.price}</td>
 	<td>${prod.category.idealfor}</td>
 	<td>${prod.type}</td>

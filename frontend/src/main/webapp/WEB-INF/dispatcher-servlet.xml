@@ -22,5 +22,6 @@
    </bean>
       <!-- <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**"></mvc:resources> -->
       <mvc:resources location="/WEB-INF/resources/images/" mapping="/images/**"></mvc:resources>
-      <mvc:resources location="/WEB-INF/resources/tools/" mapping="/tools/**"></mvc:resources> 
+      <mvc:resources location="/WEB-INF/resources/tools/" mapping="/tools/**"></mvc:resources>
+      <mvc:resources location="/WEB-INF/resources/productImages/" mapping="/productImages/**"></mvc:resources> 
 </beans>

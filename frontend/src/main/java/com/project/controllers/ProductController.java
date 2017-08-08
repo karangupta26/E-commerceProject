@@ -73,6 +73,11 @@ public class ProductController {
 		productService.deleteProduct(id);
 		return "redirect:/ProductForm";
 	}
-	
+	@RequestMapping(value="/product/details/{id}")
+	public String getProductById(@PathVariable int id,Model model){
+		Product product=productService.getProductById(id);
+		model.addAttribute("productDetails", product);
+		return "ViewProduct";
+	}
 	
 }
