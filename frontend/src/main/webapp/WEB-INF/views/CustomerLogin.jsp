@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
@@ -12,16 +13,16 @@
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
 <div class="container">
-<c:url value="/springsecuritycheck" var="security"></c:url>
-<form class="form-signin"  action="${security}" method=post>
+<c:url value="/j_spring_security_check" var="security"></c:url>
+<form class="form-signin"  action="${security }" method=post>
  <h3 class="form-signin-heading" align="center">Please sign in</h3>
  <div class="form-group">
  Enter User Name:
- <input name="SpringSecurityCustomerUsername" type="text" class="form-control" placeholder="User Name"/>
+ <input name="SpringSecurityUsername" type="text" class="form-control" placeholder="User Name"/>
  </div>
  <div class="form-group">
  Enter User Name:
- <input name="SpringSecurityCustomerPassword" type="password" class="form-control" placeholder="Password">
+ <input name="SpringSecurityPassword" type="password" class="form-control" placeholder="Password">
  </div>
  <div class="wrapper">
 <button class="btn btn-large btn-primary" type="submit" >Sign in</button>
