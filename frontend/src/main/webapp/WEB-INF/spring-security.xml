@@ -22,27 +22,29 @@
 <!--       /> -->
 <!--       </security:http> -->
 		<global-method-security secured-annotations="enabled"></global-method-security>
-		<http name="vendor" auto-config="true" use-expressions="false" >
-		<intercept-url pattern="/vendor/**" access="hasRole('ROLE_VENDOR')"/>
-      <intercept-url pattern="/**" access="permitAll"/>
+
+
+<!-- 		<http name="vendor" auto-config="true" use-expressions="false" > -->
+<!-- 		<intercept-url pattern="/vendor/**" access="hasRole('ROLE_VENDOR')"/> -->
+<!--       <intercept-url pattern="/**" access="permitAll"/> -->
 			
-		<form-login login-page="/CustomerLogin" 
-      username-parameter="SpringSecurityUsername" password-parameter="SpringSecurityPassword"
-      login-processing-url="/j_spring_security_check"
-      default-target-url="/Home"
-      authentication-failure-url="/invalidLogin"
-      always-use-default-target="true" 
-      />
-      <logout logout-success-url="/Home"
-      logout-url="/spring_security_logout"
-      />
-		</http>      
-      <authentication-manager>
-      <authentication-provider>
-      <jdbc-user-service data-source-ref="getDataSource"
-      authorities-by-username-query="SELECT username,role FROM authorities where username=?"
-      users-by-username-query="SELECT username,password,enabled FROM user where username=?"
-      />
-      </authentication-provider>
-      </authentication-manager>
+<!-- 		<form-login login-page="/CustomerLogin"  -->
+<!--       username-parameter="SpringSecurityUsername" password-parameter="SpringSecurityPassword" -->
+<!--       login-processing-url="/j_spring_security_check" -->
+<!--       default-target-url="/Home" -->
+<!--       authentication-failure-url="/invalidLogin" -->
+<!--       always-use-default-target="true"  -->
+<!--       /> -->
+<!--       <logout logout-success-url="/Home" -->
+<!--       logout-url="/spring_security_logout" -->
+<!--       /> -->
+<!-- 		</http>       -->
+<!--       <authentication-manager> -->
+<!--       <authentication-provider> -->
+<!--       <jdbc-user-service data-source-ref="getDataSource" -->
+<!--       authorities-by-username-query="SELECT username,role FROM authorities where username=?" -->
+<!--       users-by-username-query="SELECT username,password,enabled FROM user where username=?" -->
+<!--       /> -->
+<!--       </authentication-provider> -->
+<!--       </authentication-manager> -->
        </beans:beans>
