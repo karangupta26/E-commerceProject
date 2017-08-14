@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
@@ -58,10 +59,14 @@
 	<div class="col-xs-2">
 	<div class="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
 	<c:if test="${pageContext.request.userPrincipal.name==null }">
+	
 	<p class="navbarfont navbar-text"><b><a href="<c:url value="/Vendor"/>">SELL ON FASHGEN</a></b></p>
+	
 	</c:if>
 	<c:if test="${pageContext.request.userPrincipal.name!=null }">
+	<security:authorize access="hasRole('ROLE_VENDOR')">
 	<p class="navbarfont navbar-text"><b><a href="<c:url value="/vendor/Product/ProductForm"/>">PRODUCT OPERATIONS</a></b></p>
+	</security:authorize>
 	</c:if>
 	</div>
 	</div>
