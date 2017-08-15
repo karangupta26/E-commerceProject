@@ -2,6 +2,7 @@ package com.project.model;
 
 
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
+import org.hibernate.annotations.Cascade;
 import org.springframework.web.multipart.MultipartFile;
 
 @Entity
@@ -32,6 +34,9 @@ public class Product {
 	private String necktype;
 	private int pockets;
 	private double price;
+	@ManyToOne(cascade=CascadeType.ALL)
+	@JoinColumn(name="vendorId")
+	private Vendor vendor;
 	@ManyToOne
 	@JoinColumn(name="CatId")
 	private Category category;
@@ -144,6 +149,12 @@ public class Product {
 	}
 	public void setImage(MultipartFile image) {
 		this.image = image;
+	}
+	public Vendor getVendor() {
+		return vendor;
+	}
+	public void setVendor(Vendor vendor) {
+		this.vendor = vendor;
 	}
 	
 }

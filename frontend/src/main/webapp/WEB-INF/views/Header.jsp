@@ -72,7 +72,7 @@
 	</div>
 	<div class="col-xs-2">
 	<div class="collapse navbar-collapse clear" id="bs-example-navbar-collapse-1">
-	<c:url value="/spring_security_logout" var="logoutUrl"></c:url>
+	<c:url value="/j_spring_security_logout" var="logoutUrl"></c:url>
 	<c:if test="${pageContext.request.userPrincipal.name!=null }">
 	<p class="navbarfont navbar-text"><a href="${logoutUrl }"><b>LOGOUT</b></a></p>
 	</c:if>
@@ -94,20 +94,21 @@
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav nav-pills"  role="tablist">
 				<li><a href="<c:url value="/Home"/>"> Home</a></li>
-				<li><a href="#"> Men</a></li>
-				<li><a href="#"> Women</a></li>
-				<li><a href="#"> Boys</a></li>
-				<li><a href="#"> Girls</a></li>
+				<c:forEach var="category" items="${categoryList }">
+					<li><a href="<c:url value="/product/getProductByCategory/${category.catId}"/>"> ${category.idealfor}</a></li>
+				</c:forEach>
+<!-- 				<li><a href="#"> Men</a></li> -->
+<!-- 				<li><a href="#"> Women</a></li> -->
+<!-- 				<li><a href="#"> Boys</a></li> -->
+<!-- 				<li><a href="#"> Girls</a></li> -->
 			</ul>
 			<ul class="nav navbar-nav navbar-right nav-pills" role="tablist">
 				<c:if test="${pageContext.request.userPrincipal.name==null }">
-				<li><a href="<c:url value="/CustomerLogin"/>"><span class="glyphicon glyphicon-user"></span> Login</a></li>
+				<li><a href="<c:url value="/Login"/>"><span class="glyphicon glyphicon-user"></span> Login</a></li>
 				<li><a href="<c:url value="/CustomerForm"/>"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
 				</c:if>
-<%-- 				<c:url value="/spring_security_logout" var="logoutUrl"></c:url> --%>
-<%-- 				<c:if test="${pageContext.request.userPrincipal.name!=null }"> --%>
-<%-- 				<p class="navbarfont navbar-text"><a href="${logoutUrl }"><b>LOGOUT</b></a></p> --%>
-<%-- 				</c:if> --%>
+				<c:url value="/" var="getCart"></c:url>
+				<li> <security:authorize access="hasAnyRole('ROLE_CUSTOMER','')"><a href="${getCart}"><b>Cart</b></a></security:authorize> </li>
 			</ul>
 		</div>
 	</div>

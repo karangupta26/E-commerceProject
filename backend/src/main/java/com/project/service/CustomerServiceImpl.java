@@ -21,5 +21,8 @@ public class CustomerServiceImpl implements CustomerService{
 	public Customer validateEmail(String email) {
 		return customerDao.validateEmail(email);
 	}
+	public Customer getCustomerByusername(String username) {
+		return customerDao.getCustomerByUsername(username);
+	}
 
 }

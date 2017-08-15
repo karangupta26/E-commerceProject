@@ -7,4 +7,5 @@ public interface CustomerDAO {
 	void registerCustomer(Customer customer);
 	User validateUserName(String username);
 	Customer validateEmail(String email);
+	Customer getCustomerByUsername(String username);
 }

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.project.dao.CartItemDAO;
+import com.project.model.Cart;
 import com.project.model.CartItem;
 @Service
 @Transactional
@@ -24,6 +25,10 @@ public class CartItemServiceImpl implements CartItemService{
 	public void removeAllCartItem(int cartId) {
 		cartItemDao.removeAllCartItem(cartId);
 		
+	}
+
+	public Cart getCart(int cartId) {
+		return cartItemDao.getcart(cartId);
 	}
 	
 }

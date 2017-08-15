@@ -20,7 +20,7 @@
 <div class="container">
 <div class="row">
  
-<div class="col-lg-6 ">
+<div class="col-lg-6 " align="center">
 <form:form action="VendorSignUpRegister" modelAttribute="vendor">
 <div class="form-group">
 <H3 align="center">Vendor Sign Up</H3>
@@ -40,24 +40,7 @@ Enter Password:
 </form:form>
  </div>
  
- <div class="col-lg-6">
- <c:url value="/j_spring_security_check" var="security"/>
-<form class="form-signin" action="${security}" method=post>
- <h3 class="form-signin-heading" align="center">Please sign in</h3>
- <div class="form-group">
- Enter User Name:
- <input name="SpringSecurityUsername" type="text" class="form-control" placeholder="User Name"/>
  </div>
- <div class="form-group">
- Enter User Name:
- <input name="SpringSecurityPassword" type="password" class="form-control" placeholder="Password">
- </div>
- <div class="wrapper">
-<button class="btn btn-large btn-primary" type="submit" >Sign in</button>
-</div> 
- </form>
- </div>
-</div>
  
 </div>
 

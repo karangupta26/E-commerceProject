@@ -46,5 +46,10 @@ public class CustomerDAOImpl implements CustomerDAO {
 		Customer customer=(Customer)query.uniqueResult();
 		return customer;
 	}
+	public Customer getCustomerByUsername(String username) {
+		Session session=sessionFactory.getCurrentSession();
+		Customer customer=(Customer)session.get(Customer.class, username);
+		return customer;
+	}
 
 }

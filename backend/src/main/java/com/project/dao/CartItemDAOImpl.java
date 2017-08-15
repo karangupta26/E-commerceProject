@@ -34,4 +34,10 @@ public class CartItemDAOImpl implements CartItemDAO {
 		
 	}
 
+	public Cart getcart(int cartId) {
+		Session session=sessionFactory.getCurrentSession();
+		Cart cart=(Cart)session.get(Cart.class,cartId); 
+		return cart;
+	}
+
 }

@@ -21,11 +21,18 @@ import com.project.service.ProductService;
 import com.project.model.Category;
 //import com.project.service.ProductServiceImpl;
 import com.project.model.Product;
+import com.project.model.Vendor;
 
 @Controller
 public class ProductController {
 	@Autowired
 	private ProductService productService;
+	@RequestMapping(value="/product/getProductByCategory/${catId}")
+	public String getProductByCatId(@PathVariable int catId,Model model){
+		List<Product> productListByCategory=productService.getAllProductsByCategory(catId);
+		model.addAttribute("productListByCategory", productListByCategory);
+		return null;
+	}
 	@RequestMapping(value="/vendor/Product/ProductForm")
 	public String productForm(Model model) {
 		List<Category> catObj=productService.getAllCategory();
@@ -64,12 +71,12 @@ public class ProductController {
 	@RequestMapping(value="/vendor/editProduct/editFunction")
 	public String editProduct(@ModelAttribute(name="productEdit") Product product){
 		productService.updateProduct(product);
-		return "redirect:/ProductForm";
+		return "redirect:/vendor/Product/ProductForm";
 	}
 	@RequestMapping(value="/vendor/deleteProduct/{pid}")
 	public String deleteProduct(@PathVariable("pid") int id){
 		productService.deleteProduct(id);
-		return "redirect:/ProductForm";
+		return "redirect:/vendor/Product/ProductForm";
 	}
 	@RequestMapping(value="/product/details/{id}")
 	public String getProductById(@PathVariable int id,Model model){

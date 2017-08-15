@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
  <%@ page isELIgnored="false" %>
 <!DOCTYPE html >
 <html>
@@ -14,7 +15,7 @@
 <div class="col-md-6">
 <img alt="${productDetails.productname}" src="<c:url value="/productImages/${productDetails.pid}.jpeg"/>" class="img-responsive">
 </div>
-<div class="col-md=6">
+<div class="col-md-6">
 <h3>${productDetails.brand} ${productDetails.productname}</h3>
 <h4>${productDetails.price}</h4>
 <table class="tg">
@@ -91,6 +92,29 @@
 </table>
 </div>
 
+</div>
+<div class="container">
+<div class="col-md-6">
+</div>
+<div class="col-md-6">
+		<security:authorize access="hasAnyRole('ROLE_CUSTOMER','')">
+		<c:if test="${ productDetails.qty==0}">
+		OUT OF STOCK
+		</c:if>
+		<c:if test="${productDetails.qty!=0 }">
+		<c:url value="" var="url"></c:url>
+		<form action="${url }">
+		<div class="form-group">
+		Enter Quantity:
+		<input type="text" name="units" class="form-control"/>
+		</div>
+		<div class="form-group">
+		<button type="submit" class="btn btn-dafault btn lg"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+		</div>
+		</form>
+		</c:if>
+		</security:authorize>
+</div>
 </div>
 <jsp:include page="Footer.jsp"></jsp:include>
 </body>
