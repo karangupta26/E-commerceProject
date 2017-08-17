@@ -15,8 +15,6 @@ public class HomeController {
 	private ProductService productService;
 	@RequestMapping("/Home")
 	public String home(Model model){
-		List<Category> categories=productService.getAllCategory();
-		model.addAttribute("categoryList", categories);
 		return "Home";
 	}
 	@RequestMapping("/AboutUs")

@@ -27,11 +27,11 @@ import com.project.model.Vendor;
 public class ProductController {
 	@Autowired
 	private ProductService productService;
-	@RequestMapping(value="/product/getProductByCategory/${catId}")
+	@RequestMapping(value="/product/getProductByCategory/{catId}")
 	public String getProductByCatId(@PathVariable int catId,Model model){
 		List<Product> productListByCategory=productService.getAllProductsByCategory(catId);
 		model.addAttribute("productListByCategory", productListByCategory);
-		return null;
+		return "DisplayProduct";
 	}
 	@RequestMapping(value="/vendor/Product/ProductForm")
 	public String productForm(Model model) {

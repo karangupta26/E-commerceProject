@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
 <%@ taglib uri="http://www.springframework.org/security/tags" prefix="security" %>
 <%@ page isELIgnored="false" %>
 <!DOCTYPE html>
@@ -22,13 +23,23 @@
 </head>
 
 <header>
-
+<!-- Getting Category List -->
+<sql:setDataSource
+	var="categoryDs"
+	driver="org.h2.Driver"
+	url="jdbc:h2:tcp://localhost/~/project"
+	user="project" password="project"
+/>
+<sql:query var="categoryList" dataSource="${categoryDs }">
+	select * from category
+</sql:query>
+<!-- Ends Here -->
 <nav class="navbar-inverse navbar-fixed-top" role="navigation">
 	<div class="container-fluid">
 	<div class="row">
 	<div class="col-xs-1">
 	<div class="navbar-header">
-		<img src="images/Logo1.jpeg" alt="FG" class="img-rounded"  width="120" height="50"></img>
+		<img src="<c:url value="/images/Logo1.jpeg"/>" alt="FG" class="img-rounded"  width="120" height="50"></img>
 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -93,14 +104,10 @@
 		</div>
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav nav-pills"  role="tablist">
-				<li><a href="<c:url value="/Home"/>"> Home</a></li>
-				<c:forEach var="category" items="${categoryList }">
+				<li><a href="<c:url value="/Home"/>"> HOME</a></li>
+				<c:forEach var="category" items="${categoryList.rows }">
 					<li><a href="<c:url value="/product/getProductByCategory/${category.catId}"/>"> ${category.idealfor}</a></li>
 				</c:forEach>
-<!-- 				<li><a href="#"> Men</a></li> -->
-<!-- 				<li><a href="#"> Women</a></li> -->
-<!-- 				<li><a href="#"> Boys</a></li> -->
-<!-- 				<li><a href="#"> Girls</a></li> -->
 			</ul>
 			<ul class="nav navbar-nav navbar-right nav-pills" role="tablist">
 				<c:if test="${pageContext.request.userPrincipal.name==null }">
