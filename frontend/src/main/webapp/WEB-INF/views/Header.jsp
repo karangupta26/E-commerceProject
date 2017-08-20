@@ -114,7 +114,7 @@
 				<li><a href="<c:url value="/Login"/>"><span class="glyphicon glyphicon-user"></span> Login</a></li>
 				<li><a href="<c:url value="/CustomerForm"/>"><span class="glyphicon glyphicon-log-in"></span> Sign Up </a></li>
 				</c:if>
-				<c:url value="/" var="getCart"></c:url>
+				<c:url value="/cart/getcart" var="getCart"></c:url>
 				<li> <security:authorize access="hasAnyRole('ROLE_CUSTOMER','')"><a href="${getCart}"><b>Cart</b></a></security:authorize> </li>
 			</ul>
 		</div>

@@ -97,23 +97,24 @@
 <div class="col-md-6">
 </div>
 <div class="col-md-6">
-		<security:authorize access="hasAnyRole('ROLE_CUSTOMER','')">
+	<c:if test="${pageContext.request.userPrincipal.name!=null }">
 		<c:if test="${ productDetails.qty==0}">
 		OUT OF STOCK
 		</c:if>
 		<c:if test="${productDetails.qty!=0 }">
-		<c:url value="" var="url"></c:url>
-		<form action="${url }">
+		<c:url value="/cart/addToCart/${productDetails.pid}" var="url"/>
+		<form action="${url}">
 		<div class="form-group">
 		Enter Quantity:
 		<input type="text" name="units" class="form-control"/>
 		</div>
 		<div class="form-group">
-		<button type="submit" class="btn btn-dafault btn lg"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+		<button type="submit" class="btn btn-dafault btn lg"><span class="glyphicon glyphicon-shopping-cart"></span>Add To Cart</button>
 		</div>
+		<p>${errorMessage}</p>
 		</form>
 		</c:if>
-		</security:authorize>
+</c:if>
 </div>
 </div>
 <jsp:include page="Footer.jsp"></jsp:include>

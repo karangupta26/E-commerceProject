@@ -13,6 +13,7 @@
 }
 </style>
 </head>
+<body>
 <%@ include file="Header.jsp" %> 
 <div class="container-fluid text-center bg1" >
 <h3 class="margin" id="text">Who Am I?</h3>
@@ -23,4 +24,5 @@
 
 
 <%@include file="Footer.jsp" %>
+</body>
 </html>

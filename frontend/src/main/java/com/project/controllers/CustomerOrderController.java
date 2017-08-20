@@ -20,13 +20,13 @@ public class CustomerOrderController {
 	private CustomerOrderService customerOrderService;
 	@Autowired
 	private CartItemService cartItemService;
-	@RequestMapping(value="/cart/shippingaddressform/${cartId}")
+	@RequestMapping(value="/cart/shippingaddressform/{cartId}")
 	public String getShippingAddress(@PathVariable int cartId,Model model){
 		Cart cart=cartItemService.getCart(cartId);
 		Customer customer=cart.getCustomer();
 		model.addAttribute("shippingAddress", customer.getShippingAddress());
 		model.addAttribute("cartId", cartId);
-		return null;
+		return "ShippingForm";
 	}
 	@RequestMapping(value="/cart/order/{cartId}")
 	public String createOrder(@PathVariable int cartId,@ModelAttribute ShippingAddress shippingAddress,Model model){
@@ -37,11 +37,11 @@ public class CustomerOrderController {
 		CustomerOrder customerOrder=customerOrderService.createOrder(cart);
 		model.addAttribute("customerOrder",customerOrder);
 		model.addAttribute("cartId", cartId);
-		return null;
+		return "OrderDetails";
 	}
-	@RequestMapping(value="/cart/confirm/{CartId}")
+	@RequestMapping(value="/cart/confirm/{cartId}")
 	public String confirmOrder(@ModelAttribute CustomerOrder customerOrder,@PathVariable int cartId){
 		cartItemService.removeAllCartItem(cartId);
-		return null;
+		return "Confirmed";
 	}
 }

@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title></title>
+<title>Product Page</title>
 </head>
 <body>
 <jsp:include page="Header.jsp"></jsp:include>

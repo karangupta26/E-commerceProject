@@ -48,7 +48,9 @@ public class CustomerDAOImpl implements CustomerDAO {
 	}
 	public Customer getCustomerByUsername(String username) {
 		Session session=sessionFactory.getCurrentSession();
-		Customer customer=(Customer)session.get(Customer.class, username);
+		Query query=session.createQuery("from Customer where user.username=?");
+		query.setString(0, username);
+		Customer customer=(Customer)query.uniqueResult();
 		return customer;
 	}
 

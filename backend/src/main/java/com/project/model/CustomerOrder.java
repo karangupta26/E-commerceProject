@@ -13,7 +13,7 @@ import javax.persistence.ManyToOne;
 @Entity
 public class CustomerOrder {
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int orderId;
 	private Date purchaseDate;
 	@ManyToOne(cascade=CascadeType.ALL)
