@@ -15,7 +15,7 @@
 <div class="container">
 <c:url value="/j_spring_security_check" var="security"></c:url>
 <form class="form-signin"  action="${security }" method=post>
- <h3 class="form-signin-heading" align="center">Please sign in as</h3> <h2>Vendor Or Customer</h2>
+ <h3 class="form-signin-heading" align="center">Please sign in as</h3> <h2 align="center">Vendor Or Customer</h2>
  <div class="form-group">
  Enter User Name:
  <input name="SpringSecurityUsername" type="text" class="form-control" placeholder="User Name"/>
@@ -29,6 +29,7 @@
 </div> 
  </form>
  </div>
+ <br><br><br>
 <jsp:include page="Footer.jsp"></jsp:include>
 </body>
 </html>

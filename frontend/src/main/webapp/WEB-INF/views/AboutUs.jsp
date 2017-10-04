@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +18,7 @@
 <%@ include file="Header.jsp" %> 
 <div class="container-fluid text-center bg1" >
 <h3 class="margin" id="text">Who Am I?</h3>
-<img alt="Logo" src="images/samplelogo.jpeg" class="img-responsive img-circle margin" style="display:inline">
+<img alt="Logo" src="<c:url value="/images/Logo1.jpeg"/>" class="img-responsive img-circle margin" style="display:inline">
 <p id="text" align="center" class="text">This is Devloped by Karan Gupta a Student of NIIT Under the guidance of Vandana Ma'am and Vishal Sir.
 </p>
 </div>

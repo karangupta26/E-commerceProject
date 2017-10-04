@@ -34,9 +34,6 @@ public class Product {
 	private String necktype;
 	private int pockets;
 	private double price;
-	@ManyToOne(cascade=CascadeType.ALL)
-	@JoinColumn(name="vendorId")
-	private Vendor vendor;
 	@ManyToOne
 	@JoinColumn(name="CatId")
 	private Category category;
@@ -150,11 +147,6 @@ public class Product {
 	public void setImage(MultipartFile image) {
 		this.image = image;
 	}
-	public Vendor getVendor() {
-		return vendor;
-	}
-	public void setVendor(Vendor vendor) {
-		this.vendor = vendor;
-	}
+	
 	
 }

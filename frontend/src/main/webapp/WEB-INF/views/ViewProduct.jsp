@@ -17,10 +17,10 @@
 </div>
 <div class="col-md-6">
 <h3>${productDetails.brand} ${productDetails.productname}</h3>
-<h4>${productDetails.price}</h4>
-<table class="tg">
+<h4>&#8377 ${productDetails.price}</h4>
+<table class="table">
 <tr>
-<td colspan="2"></td>
+<th colspan="2">SPECIFICATIONS</th>
 </tr>
 <tr>
 <td>Model Details

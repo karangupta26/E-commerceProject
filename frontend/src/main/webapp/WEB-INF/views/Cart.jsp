@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+zz
 <title>Cart</title>
 </head>
 <body>
@@ -21,7 +21,7 @@ Clear Cart
 
 </div>
 <div class="container">
-<table>
+<table class="table">
 <thead>
 <tr>
 <th>Name</th>
@@ -37,12 +37,12 @@ Clear Cart
 <td>${ cartItem.quantity}</td>
 <td>${cartItem.totalPrice}</td>
 <c:url value="/cart/removeCartItem/${cartItem.cartItemId }" var="remove"></c:url>
-<td><a href="${remove}"><c:set var="grandTotal" value="${cartItem.totalPrice+grandTotal}"></c:set><span class="glyphicon glyphion-remove"></span> Remove</a></td>
+<td class="active"><a href="${remove}"><c:set var="grandTotal" value="${cartItem.totalPrice+grandTotal}"></c:set><span class="glyphicon glyphion-remove"></span> Remove</a></td>
 </tr>
 </c:forEach>
 <tr >
-<td colspan="3">Total Price</td>
-<td>${grandTotal}</td>
+<td colspan="3" align="right">Total Price:</td>
+<td>&#8377 ${grandTotal}</td>
 </tr>
 </table>
 </div>

@@ -23,8 +23,6 @@ public class Vendor {
 	@JoinColumn(name="UserId")
 	@Valid
 	private User vuser;
-	@OneToMany(mappedBy="vendor",cascade=CascadeType.ALL)
-	private List<Product> productList; 
 	public int getVendorId() {
 		return vendorId;
 	}
@@ -37,12 +35,7 @@ public class Vendor {
 	public void setVuser(User vuser) {
 		this.vuser = vuser;
 	}
-	public List<Product> getProductList() {
-		return productList;
-	}
-	public void setProductList(List<Product> productList) {
-		this.productList = productList;
-	}	
+	
 	
 
 }

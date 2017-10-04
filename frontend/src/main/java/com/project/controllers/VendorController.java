@@ -17,17 +17,17 @@ public class VendorController {
 	@RequestMapping("/Vendor")
 	public String getVendorLoginAndSignUp(Model model){
 		model.addAttribute("vendor",new Vendor());
-		return "VendorLoginAndSignUp";
+		return "VendorSignUp";
 	}
 	@RequestMapping("/VendorSignUpRegister")
 	public String VendorSignUp(@ModelAttribute Vendor vendor,BindingResult result,Model model){
 		if(result.hasErrors()){
-			return "VendorLoginAndSignUp";
+			return "VendorSignUp";
 		}
 		User user=vendorService.validateUserName(vendor.getVuser().getUsername());
 		if(user!=null){
 			model.addAttribute("duplicateVendor","Vendor Username Already Exists." );
-			return "VendorLoginAndSignUp";
+			return "VendorSignUp";
 		}
 		vendorService.registerVendor(vendor);
 		return "Home";

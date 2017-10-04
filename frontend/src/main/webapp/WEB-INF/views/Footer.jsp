@@ -12,20 +12,18 @@
 	<script src="https://use.fontawesome.com/034feea29c.js"></script>
 	
 	<style type="text/css">
-	#footer {
-  	position: relative;
-  	left:0;
-	bottom: 0;
+	footer {
+  
+  	bottom: 0;
 	width: 100%;
-	/* Set the fixed height of the footer here */
-	height: 45px;
+	
 	background-color:black;
 	}
 	
 	</style>
 <title>Insert title here</title>
 </head>
-<footer class="footer" id="footer">
+<footer class="footer-bottom" id="footer">
 <div class="container">
      <div class="row">
         <div class="col-sm-6">

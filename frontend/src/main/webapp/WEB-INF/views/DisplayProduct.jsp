@@ -7,45 +7,33 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Product Page</title>
+<style type="text/css">
+.card{
+padding-bottom: 25px;
+padding-left: 25px;
+
+}
+
+</style>
 </head>
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
 <div class="container">
 <c:forEach items="${productListByCategory}"  var="products">
 <div class="row">
-<div class="col-md-4">
 <div class="card">
-<div class="row">
 <div class="col-md-4">
+<div class="card-block">
 <img alt="${products.productname }" src="<c:url value="/productImages/${products.pid}.jpeg"/>" class="img-thumbnail" >
 </div>
 </div>
-<div class="row">
-<div class="col-md-4">
-<a href="<c:url value="/product/details/${products.pid}" />">${products.productname }</a><br>
+<div class="col-md-8">
+<h4 class="card-title"><a href="<c:url value="/product/details/${products.pid}" />">${products.productname }</a><br></h4>
 &#8377 ${products.price }<br>
 ${products.type}
-</div>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="card">
-<div class="row">
-<div class="col-md-4">
-<img alt="${products.productname }" src="<c:url value="/productImages/${products.pid}.jpeg"/>" class="img-thumbnail" >
-</div>
-</div>
-<div class="row">
-<div class="col-md-4">
-<a href="<c:url value="/product/details/${products.pid}" />">${products.productname }</a><br>
-&#8377 ${products.price }<br>
-${products.type}
-</div>
-</div>
-</div>
 </div>
 
+</div>
 </div>
 </c:forEach>
 </div>

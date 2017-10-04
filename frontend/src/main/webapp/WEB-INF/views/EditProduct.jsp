@@ -16,7 +16,7 @@
 <form:form  action="${url}" modelAttribute="productEdit">
 <div class="form-group">
 <form:hidden path="pid" class="form-control" />
-<form:hidden path="vendor.vendorId"/>
+
 </div>
 <div class="form-group">
 Enter Model Details:

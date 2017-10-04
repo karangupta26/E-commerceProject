@@ -35,9 +35,6 @@ public class CartItemController {
 		Product product=productservice.getProductById(id);
 		User user=(User)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String username=user.getUsername();
-		if(username==null){
-			System.out.println("Hello");
-		}		
 		Customer customer=customerService.getCustomerByusername(username);
 		if(customer==null){
 			Product productError=productservice.getProductById(id);

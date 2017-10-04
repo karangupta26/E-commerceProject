@@ -4,12 +4,17 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>OOPS! Something went Wrong</title>
+<style type="text/css">
+.container{
+
+}
+</style>
 </head>
 <body>
 <jsp:include page="Header.jsp"></jsp:include>
 <div class="container">
-<h3 align="center">Invalid UserName and Password</h3>
+<h3 align="center">Invalid Username and Password</h3>
 
 
 </div>
